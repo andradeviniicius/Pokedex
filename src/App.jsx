@@ -1,11 +1,10 @@
-import MainTitle from "./components/atoms/MainTitle";
+import PokeNews from "@organisms/PokeNews";
+import HomeScreen from "./components/pages/HomeScreen";
 
 function App() {
   return (
     <>
-      <MainTitle elem={""} elemModifier="" textContent={"What Pokemon are you looking for?"}/>
-      <MainTitle elem={"about"} textContent={"Bulbasaur"} />
-      <MainTitle elem={"about"} elemModifier={"mini"} textContent={"Bulbasaur"} customStyle={'colorRed'} />
+      <HomeScreen/>
     </>
   );
 }
