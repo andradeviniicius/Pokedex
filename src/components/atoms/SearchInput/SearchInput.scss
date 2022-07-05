@@ -4,5 +4,12 @@
     height: 4.5rem;
     background-color: var(--light-gray);
     border-radius: 10rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
   }
 }
