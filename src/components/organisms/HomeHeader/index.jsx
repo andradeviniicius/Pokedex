@@ -1,3 +1,5 @@
-const HomeHeader = () => {};
+const HomeHeader = () => {
+  return <header className="homeHeader"></header>;
+};
 
 export default HomeHeader;

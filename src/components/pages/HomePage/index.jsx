@@ -1,10 +1,10 @@
-import { MainTitle } from "@/components/atoms";
+import { HomeHeader } from "@/components/organisms";
 
 const HomePage = () => {
   return (
-    <header>
-      <MainTitle textContent={"What Pokemon are you looking for?"} />
-    </header>
+    <>
+      <HomeHeader />
+    </>
   );
 };
 
