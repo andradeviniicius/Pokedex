@@ -2,6 +2,14 @@
   &__item {
     background-color: var(--dark-green);
     border-radius: 1.5rem;
+    padding: 0 1.6rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link,
+  &__link:active,
+  &__link:visited {
     color: var(--white);
     font-size: 1.4rem;
     line-height: 1.4rem;
