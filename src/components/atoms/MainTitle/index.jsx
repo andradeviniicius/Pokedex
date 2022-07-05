@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-import "./styles.scss";
+import "./mainTitle.scss";
 
 export default function MainTitle({
   elem,
@@ -25,5 +23,3 @@ export default function MainTitle({
     </>
   );
 }
-
-
