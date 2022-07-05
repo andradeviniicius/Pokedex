@@ -1,5 +1,5 @@
 import { MainTitle, SearchInput } from "@/components/atoms";
-import "./HomeSearch.scss";
+import "./homeSearch.scss";
 
 const HomeSearch = () => {
   return (

@@ -6,10 +6,29 @@
     border-radius: 10rem;
     display: flex;
     justify-content: space-between;
+    padding: 0.8rem 1.8rem;
   }
 
   &__button {
     border: none;
     background-color: transparent;
+  }
+
+  &__image {
+  }
+
+  &__input {
+    border: none;
+    background-color: var(--light-gray);
+    flex: 1;
+    font-family: inherit;
+    font-size: 1.4rem;
+    line-height: 4.2rem;
+    padding-left: 1.3rem;
+    color: var(--dark-gray);
+
+    &::placeholder {
+      opacity: 0.4;
+    }
   }
 }

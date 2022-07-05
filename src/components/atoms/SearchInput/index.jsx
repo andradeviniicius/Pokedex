@@ -1,4 +1,4 @@
-import "./SearchInput.scss";
+import "./searchInput.scss";
 
 const SearchInput = () => {
   return (
@@ -10,7 +10,10 @@ const SearchInput = () => {
           alt="Search Button"
         />
       </button>
-      <input className="homeHeader__input"></input>
+      <input
+        className="homeHeader__input"
+        placeholder="Search Pokemon, Move, Ability etc"
+      ></input>
     </div>
   );
 };
