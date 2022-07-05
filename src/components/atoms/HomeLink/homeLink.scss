@@ -1,10 +1,11 @@
 .homeHeader {
   &__item {
-    background-color: var(--dark-green);
+    background-color: var(--dark-purple);
     border-radius: 1.5rem;
     padding: 0 1.6rem;
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   &__link,
@@ -13,5 +14,19 @@
     color: var(--white);
     font-size: 1.4rem;
     line-height: 1.4rem;
+  }
+
+  &__pokeball {
+    opacity: 0.4;
+
+    &--right {
+      position: absolute;
+      right: 0;
+    }
+
+    &--left {
+      position: absolute;
+      left: 0;
+    }
   }
 }
