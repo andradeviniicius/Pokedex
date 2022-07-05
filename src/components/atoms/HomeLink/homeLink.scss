@@ -8,16 +8,22 @@
     position: relative;
 
     &--green {
+      background-color: var(--dark-green);
     }
     &--red {
+      background-color: var(--dark-red);
     }
     &--blue {
+      background-color: var(--dark-blue);
     }
     &--yellow {
+      background-color: var(--dark-yellow);
     }
     &--purple {
+      background-color: var(--dark-purple);
     }
     &--brown {
+      background-color: var(--dark-brown);
     }
   }
 
