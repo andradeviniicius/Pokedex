@@ -7,6 +7,7 @@ export default function MainTitle({
   blockModifier,
   elemModifier,
   textContent,
+  customStyle,
 }) {
   return (
     <>
@@ -16,6 +17,7 @@ export default function MainTitle({
         ${blockModifier ? `mainTitle--${blockModifier}` : ""}
         ${elem ? `mainTitle__${elem}` : ""}
         ${elemModifier ? `mainTitle__${elem}--${elemModifier}` : ""}
+        ${customStyle ? `${customStyle}` : ""}
         `}
       >
         {textContent}
@@ -24,11 +26,4 @@ export default function MainTitle({
   );
 }
 
-// Ao chamar o MainTitle deve-se indicar qual modificador deseja aplicar
-// Que seja existente no arquivo scss components/atoms/index.scss
 
-// Exemplo:
-// <MainTitle modifier={'bold'}>Titulo de Teste</MainTitle>
-
-// Result:
-// <h1 className='mainTitle mainTitle__bold'>Titulo de Teste</h1>
