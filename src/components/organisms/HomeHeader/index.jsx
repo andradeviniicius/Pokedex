@@ -1,4 +1,4 @@
-import { HomeSearch, HomeNavigation } from "@/components/molecules";
+import { HomeSearch, HomeNavigation } from "@molecules";
 import "./homeHeader.scss";
 const HomeHeader = () => {
   return (

@@ -1,9 +1,11 @@
-import { HomeHeader } from "@/components/organisms";
+import { HomeHeader } from "@organisms";
+import { PokeNews } from "@organisms";
 
 const HomePage = () => {
   return (
     <>
       <HomeHeader />
+      <PokeNews />
     </>
   );
 };

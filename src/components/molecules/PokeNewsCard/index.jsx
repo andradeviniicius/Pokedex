@@ -1,5 +1,5 @@
 import "./pokeNewsCard.scss";
-import pokeRush from "./../../../../public/assets/article01.png";
+import pokeRush from "@assets/article01.png";
 
 export default function PokeNewsCard() {
   return (

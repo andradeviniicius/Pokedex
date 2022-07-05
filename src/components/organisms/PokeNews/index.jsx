@@ -1,5 +1,4 @@
-import PokeNewsHeader from "@molecules/PokeNewsHeader";
-import PokeNewsArticle from "@molecules/PokeNewsArticle";
+import { PokeNewsHeader, PokeNewsArticle } from "@molecules";
 
 import "./pokeNews.scss";
 
