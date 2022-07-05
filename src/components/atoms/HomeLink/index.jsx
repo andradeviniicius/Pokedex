@@ -1,8 +1,12 @@
 import "./homeLink.scss";
 
 const HomeLink = ({ text, color }) => {
+  const itemClasses = `homeHeader__item ${
+    color ? "homeHeader__item--" + color : ""
+  }`;
+
   return (
-    <li className="homeHeader__item">
+    <li className={itemClasses}>
       <img
         className="homeHeader__pokeball homeHeader__pokeball--right"
         src="/assets/pokeball-right-icon.svg"
