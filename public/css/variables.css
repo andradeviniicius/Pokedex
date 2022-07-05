@@ -1,3 +1,6 @@
 :root {
   --fontFamily: "Circular Std", "Montserrat", sans-serif;
+
+  /*colors*/
+  --light-gray: #f5f5f5;
 }

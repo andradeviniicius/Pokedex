@@ -1,10 +1,16 @@
+import "./SearchInput.scss";
+
 const SearchInput = () => {
   return (
-    <div>
-      <button>
-        <img src="/assets/search-icon.png" alt="Search Button" />
+    <div className="homeHeader__search">
+      <button className="homeHeader__button">
+        <img
+          className="homeHeader__image"
+          src="/assets/search-icon.png"
+          alt="Search Button"
+        />
       </button>
-      <input></input>
+      <input className="homeHeader__input"></input>
     </div>
   );
 };
