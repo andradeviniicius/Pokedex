@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import "./subTitle.scss";
 
 export default function SubTitle({
