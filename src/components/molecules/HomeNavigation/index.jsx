@@ -5,7 +5,12 @@ const HomeNavigation = () => {
   return (
     <nav className="homeHeader__nav">
       <ul className="homeHeader__list">
-        <HomeLink />
+        <HomeLink text="Pokedex" />
+        <HomeLink text="Pokedex" />
+        <HomeLink text="Pokedex" />
+        <HomeLink text="Pokedex" />
+        <HomeLink text="Pokedex" />
+        <HomeLink text="Pokedex" />
       </ul>
     </nav>
   );
