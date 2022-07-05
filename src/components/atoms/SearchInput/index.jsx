@@ -2,7 +2,7 @@ const SearchInput = () => {
   return (
     <div>
       <button>
-        <img src="" alt="Search Button" />
+        <img src="/assets/search-icon.png" alt="Search Button" />
       </button>
       <input></input>
     </div>
