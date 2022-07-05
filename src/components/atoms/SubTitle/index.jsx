@@ -8,18 +8,16 @@ export default function SubTitle({
   customStyle,
 }) {
   return (
-    <>
-      <h2
-        className={`
+    <h2
+      className={`
         subTitle
         ${blockModifier ? `subTitle--${blockModifier}` : ""}
         ${elem ? `subTitle__${elem}` : ""}
         ${elemModifier ? `subTitle__${elem}--${elemModifier}` : ""}
         ${customStyle ? `${customStyle}` : ""}
         `}
-      >
-        {textContent}
-      </h2>
-    </>
+    >
+      {textContent}
+    </h2>
   );
 }
