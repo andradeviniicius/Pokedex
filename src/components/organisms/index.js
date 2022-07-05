@@ -1,2 +1,1 @@
-export { default as HomeNavigation } from "./HomeNavigation";
-export { default as HomeSearch } from "./HomeSearch";
+export { default as HomeHeader } from "./HomeHeader";
