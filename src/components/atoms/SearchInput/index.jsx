@@ -6,7 +6,7 @@ const SearchInput = () => {
       <button className="homeHeader__button">
         <img
           className="homeHeader__image"
-          src="/assets/search-icon.png"
+          src="/assets/search-icon.svg"
           alt="Search Button"
         />
       </button>

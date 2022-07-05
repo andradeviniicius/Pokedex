@@ -7,14 +7,17 @@
     display: flex;
     justify-content: space-between;
     padding: 0.8rem 1.8rem;
+    margin-top: 4.2rem;
   }
 
   &__button {
     border: none;
     background-color: transparent;
+    transition: all 0.3s;
   }
 
-  &__image {
+  &__button:hover &__image {
+    transform: scale(1.02);
   }
 
   &__input {
