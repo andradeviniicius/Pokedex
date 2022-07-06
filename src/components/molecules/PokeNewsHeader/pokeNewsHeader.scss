@@ -1,0 +1,21 @@
+.pokeNewsHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 3.2rem;
+
+  &__btn {
+    background: none;
+    color: #6c79db;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}

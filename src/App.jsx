@@ -1,5 +1,12 @@
+import PokeNews from "@organisms/PokeNews";
+import { HomePage } from "./components/pages";
+
 function App() {
-  return <div>teste</div>;
+  return (
+    <>
+      <HomePage />
+    </>
+  );
 }
 
 export default App;

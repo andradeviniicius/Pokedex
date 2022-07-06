@@ -1,3 +1,27 @@
 :root {
   --fontFamily: "Circular Std", "Montserrat", sans-serif;
+
+  /*basic colors*/
+  --light-gray: #f5f5f5;
+  --dark-gray: #303943;
+  --white: #fff;
+
+  /*pokemon colors*/
+  --light-green: #46d7ab;
+  --dark-green: #4fc1a6;
+
+  --light-red: #fc7f63;
+  --dark-red: #fa6555;
+
+  --light-blue: #6dc1fd;
+  --dark-blue: #64a9fa;
+
+  --light-yellow: #ffce4b;
+  --dark-yellow: #f6c747;
+
+  --light-purple: #9f5bba;
+  --dark-purple: #7c538c;
+
+  --light-brown: #ca8179;
+  --dark-brown: #b1736c;
 }
