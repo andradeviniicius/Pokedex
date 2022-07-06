@@ -1,9 +1,12 @@
-import arrowAsset from '@assets/arrow.png'
+import arrowAsset from "@assets/arrow.png";
+import './navArrow.scss'
 
 export default function NavArrow() {
-    return (
-        <div className="navArrow">
-            <img src={arrowAsset} alt="" />
-        </div>
-    )
+  return (
+    <>
+      <button className="navArrow">
+        <img src={arrowAsset} alt="" />
+      </button>
+    </>
+  );
 }
