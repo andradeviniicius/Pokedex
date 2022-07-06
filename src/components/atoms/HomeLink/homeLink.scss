@@ -9,6 +9,10 @@
     align-items: center;
     position: relative;
 
+    @media screen and (min-width: $desktop) {
+      justify-content: center;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -72,6 +76,11 @@
     color: $white;
     font-size: 1.4rem;
     line-height: 1.4rem;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+    }
   }
 
   &__pokeball {
@@ -87,6 +96,10 @@
       position: absolute;
       left: 0;
       top: 0;
+
+      @media screen and (min-width: $desktop) {
+        transform: rotate(180deg);
+      }
     }
   }
 }

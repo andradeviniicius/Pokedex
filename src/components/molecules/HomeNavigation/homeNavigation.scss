@@ -26,8 +26,10 @@
     @media screen and (min-width: $desktop) {
       grid-template: repeat(2, minmax(auto, 6rem)) / repeat(
           3,
-          minmax(auto, 39.5rem)
+          minmax(auto, 35rem)
         );
+      row-gap: 3rem;
+      column-gap: 2rem;
     }
   }
 }
