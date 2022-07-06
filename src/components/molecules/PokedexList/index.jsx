@@ -1,4 +1,4 @@
-import { PokedexItem } from "@molecules";
+import { PokedexItem } from "@atoms";
 
 import './pokedexList.scss'
 

@@ -5,3 +5,6 @@ export { default as SearchInput } from "./SearchInput";
 
 export { default as NavArrow } from "./NavArrow";
 export { default as PokeBurguer } from "./PokeBurguer";
+
+export { default as PokedexItem } from "./PokedexItem";
+export { default as PokeType } from "./PokeType";

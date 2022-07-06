@@ -7,5 +7,4 @@ export { default as PokeNewsHeader } from "./PokeNewsHeader";
 
 export { default as PokedexHeader } from "./PokedexHeader";
 export { default as PokedexList } from "./PokedexList";
-export { default as PokedexItem } from "./PokedexItem";
 
