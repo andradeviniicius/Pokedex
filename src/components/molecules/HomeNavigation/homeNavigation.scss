@@ -1,3 +1,5 @@
+@use "/public/scss/variables" as *;
+
 .homeHeader {
   &__nav {
     width: 100%;
@@ -10,11 +12,24 @@
     display: grid;
     grid-template: repeat(3, minmax(auto, 6rem)) / repeat(
         2,
-        minmax(auto, 15.5rem)
+        minmax(auto, 25.5rem)
       );
     row-gap: 1.5rem;
     column-gap: 1rem;
     border-radius: 15px;
     justify-content: center;
+
+    @media screen and (min-width: $tablet) {
+      grid-template-columns: repeat(2, minmax(auto, 32.5rem));
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template: repeat(2, minmax(auto, 6rem)) / repeat(
+          3,
+          minmax(auto, 35rem)
+        );
+      row-gap: 3rem;
+      column-gap: 2rem;
+    }
   }
 }

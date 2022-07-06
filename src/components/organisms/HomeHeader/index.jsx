@@ -3,8 +3,10 @@ import "./homeHeader.scss";
 const HomeHeader = () => {
   return (
     <header className="homeHeader">
-      <HomeSearch />
-      <HomeNavigation />
+      <div className="homeHeader__container">
+        <HomeSearch />
+        <HomeNavigation />
+      </div>
     </header>
   );
 };

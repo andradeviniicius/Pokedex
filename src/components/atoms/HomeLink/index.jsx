@@ -12,10 +12,16 @@ const HomeLink = ({ text, color }) => {
         src="/assets/pokeball-right-icon.svg"
       />
       <a className="homeHeader__link">{text}</a>
-      <img
-        className="homeHeader__pokeball homeHeader__pokeball--left"
-        src="/assets/pokeball-left-icon.svg"
-      />
+      <picture>
+        <source
+          srcSet="/assets/pokeball-right-icon.svg"
+          media="(min-width: 1024px)"
+        />
+        <img
+          className="homeHeader__pokeball homeHeader__pokeball--left"
+          src="/assets/pokeball-left-icon.svg"
+        />
+      </picture>
     </li>
   );
 };

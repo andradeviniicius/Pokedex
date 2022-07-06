@@ -5,7 +5,9 @@ const HomePage = () => {
   return (
     <>
       <HomeHeader />
-      <PokeNews />
+      <main>
+        <PokeNews />
+      </main>
     </>
   );
 };
