@@ -1,4 +1,4 @@
-import { PokeNewsHeader, PokeNewsArticle } from "@molecules";
+import { PokeNewsHeader, PokeNewsList } from "@molecules";
 
 import "./pokeNews.scss";
 
@@ -7,7 +7,7 @@ export default function PokeNews() {
     <section className="pokeNews">
       <div className="pokeNews__container">
         <PokeNewsHeader />
-        <PokeNewsArticle />
+        <PokeNewsList />
       </div>
     </section>
   );
