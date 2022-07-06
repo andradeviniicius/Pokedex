@@ -22,5 +22,12 @@
     @media screen and (min-width: $tablet) {
       grid-template-columns: repeat(2, minmax(auto, 32.5rem));
     }
+
+    @media screen and (min-width: $desktop) {
+      grid-template: repeat(2, minmax(auto, 6rem)) / repeat(
+          3,
+          minmax(auto, 44.5rem)
+        );
+    }
   }
 }
