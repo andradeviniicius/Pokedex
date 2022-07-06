@@ -12,4 +12,9 @@
   z-index: 1;
   position: relative;
   background-color: $white;
+
+  &__container {
+    max-width: 37.5rem;
+    margin: 0 auto;
+  }
 }
