@@ -1,6 +1,8 @@
+@use "/public/scss/variables" as *;
+
 .homeHeader {
   &__item {
-    background-color: var(--dark-purple);
+    background-color: $dark-purple;
     border-radius: 1.5rem;
     padding: 0 1.6rem;
     display: flex;
@@ -8,29 +10,29 @@
     position: relative;
 
     &--green {
-      background-color: var(--dark-green);
+      background-color: $dark-green;
     }
     &--red {
-      background-color: var(--dark-red);
+      background-color: $dark-red;
     }
     &--blue {
-      background-color: var(--dark-blue);
+      background-color: $dark-blue;
     }
     &--yellow {
-      background-color: var(--dark-yellow);
+      background-color: $dark-yellow;
     }
     &--purple {
-      background-color: var(--dark-purple);
+      background-color: $dark-purple;
     }
     &--brown {
-      background-color: var(--dark-brown);
+      background-color: $dark-brown;
     }
   }
 
   &__link,
   &__link:active,
   &__link:visited {
-    color: var(--white);
+    color: $white;
     font-size: 1.4rem;
     line-height: 1.4rem;
   }
