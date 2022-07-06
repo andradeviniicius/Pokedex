@@ -1,12 +1,15 @@
-import arrowAsset from "@assets/arrow.png";
-import './navArrow.scss'
+import { Link } from "react-router-dom";
 
-export default function NavArrow() {
+
+import arrowAsset from "@assets/arrow.png";
+import "./navArrow.scss";
+
+export default function NavArrow({ goingTo }) {
   return (
     <>
-      <button className="navArrow">
+      <Link className="navArrow" to={goingTo}>
         <img src={arrowAsset} alt="" />
-      </button>
+      </Link>
     </>
   );
 }
