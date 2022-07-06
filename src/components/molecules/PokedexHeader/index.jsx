@@ -1,5 +1,4 @@
-import NavArrow from "@atoms/NavArrow";
-import PokeBurguer from "@atoms/PokeBurguer";
+import { MainTitle, NavArrow, PokeBurguer } from "@atoms";
 
 import "./pokedexHeader.scss";
 
@@ -7,8 +6,11 @@ export default function PokedexHeader() {
   return (
     <>
       <div className="pokedexHeader">
-        <NavArrow />
-        <PokeBurguer />
+        <div className="pokedexHeader__mainContainer">
+          <NavArrow />
+          <PokeBurguer />
+        </div>
+        <MainTitle textContent={"Pokedex"} />
       </div>
     </>
   );
