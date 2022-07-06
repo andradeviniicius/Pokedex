@@ -1,13 +1,13 @@
-import PokeNewsCard from "@molecules/PokeNewsCard";
+import PokeNewsItem from "@molecules/PokeNewsItem";
 
 import './pokeNewsList.scss'
 
 export default function PokeNewsList() {
   return (
       <div className="pokeNews__list">
-        <PokeNewsCard />
+        <PokeNewsItem />
         <hr />
-        <PokeNewsCard />
+        <PokeNewsItem />
         <hr />
       </div>
   );
