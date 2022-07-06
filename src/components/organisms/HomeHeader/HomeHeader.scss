@@ -17,10 +17,8 @@
     width: 100%;
     max-width: 50rem;
     margin: 0 auto;
-  }
 
-  @media screen and (min-width: $tablet) {
-    &__container {
+    @media screen and (min-width: $tablet) {
       max-width: 80rem;
     }
   }
