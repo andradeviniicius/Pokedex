@@ -1,11 +1,11 @@
-import PokeNews from "@organisms/PokeNews";
 import { HomePage } from "./components/pages";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <HomePage />
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    </Routes>
   );
 }
 
