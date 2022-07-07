@@ -70,7 +70,7 @@ export default function PokedexList() {
   ];
 
   return (
-    <div className="pokedexList">
+    <div className="pokedex__list">
       {fakeDataArray.map((item) => {
         return (
           <PokedexItem
