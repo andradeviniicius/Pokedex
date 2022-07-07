@@ -1,19 +1,34 @@
 import { PokeType } from "@atoms";
 
-import './pokedexItem.scss'
+import { Link } from "react-router-dom";
+
+import "./pokedexItem.scss";
+import "./pokedexItemModifiers.scss";
 
 export default function PokedexItem({ pokeName, pokeImage, pokeType, pokeId }) {
   return (
     <>
-      <div className="pokedex__item" onClick={{/*Mandar as info daqui pro Redux mandar pro AboutSection */}}>
-        <p>#{pokeId}</p>
-        <p>{pokeName}</p>
-        <img src={pokeImage} alt="" />
+      <Link to={'/pokedex'}>
+        <li
+          className={`pokedex__item ${`pokedex__item--${pokeType[0].toLowerCase()}`}`}
+        >
+          <p className="pokedex__pokeId">#{pokeId}</p>
 
-        {pokeType.map((type) => {
-          return <PokeType data={type} />;
-        })}
-      </div>
+          <p className="pokedex__pokeName">{pokeName}</p>
+          <div className="pokedex__pokeTypeContainer">
+            {pokeType.map((data) => {
+              return <PokeType type={data} />;
+            })}
+          </div>
+
+          <img className="pokedex__pokeImage" src={pokeImage} alt="" />
+          <img
+            className="pokedex__background"
+            src={"./../../../../public/assets/pokedex-item-bg.svg"}
+            alt=""
+          />
+        </li>
+      </Link>
     </>
   );
 }
