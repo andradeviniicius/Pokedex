@@ -1,8 +1,18 @@
-import { PokedexItem } from "@atoms";
+import { useEffect } from "react";
 
-import './pokedexList.scss'
+import { PokedexItem } from "@atoms";
+import { useDispatch } from "react-redux/es/exports";
+import { pokedexActions } from "@/store";
+
+import "./pokedexList.scss";
 
 export default function PokedexList() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(pokedexActions.fillPokemons());
+  }, []);
+
   const fakeDataArray = [
     {
       id: 1,
