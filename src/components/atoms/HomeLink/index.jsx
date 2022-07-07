@@ -8,23 +8,23 @@ const HomeLink = ({ text, color }) => {
 
   return (
     <li className={itemClasses}>
-      <img
-        className="homeHeader__pokeball homeHeader__pokeball--right"
-        src="/assets/pokeball-right-icon.svg"
-      />
       <Link className="homeHeader__link" to={"/pokedex"}>
-        {text}
-      </Link>
-      <picture>
-        <source
-          srcSet="/assets/pokeball-right-icon.svg"
-          media="(min-width: 1024px)"
-        />
         <img
-          className="homeHeader__pokeball homeHeader__pokeball--left"
-          src="/assets/pokeball-left-icon.svg"
+          className="homeHeader__pokeball homeHeader__pokeball--right"
+          src="/assets/pokeball-right-icon.svg"
         />
-      </picture>
+        <p className="homeHeader__label">{text}</p>
+        <picture>
+          <source
+            srcSet="/assets/pokeball-right-icon.svg"
+            media="(min-width: 1024px)"
+          />
+          <img
+            className="homeHeader__pokeball homeHeader__pokeball--left"
+            src="/assets/pokeball-left-icon.svg"
+          />
+        </picture>
+      </Link>
     </li>
   );
 };
