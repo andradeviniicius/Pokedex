@@ -1,9 +1,10 @@
-.pokedexHeader {
-  width: 100%;
-  margin-bottom: 4.2rem;
+.pokedex {
+  &__header {
+    width: 100%;
+    margin-bottom: 4.2rem;
+  }
 
-  
-  &__mainContainer {
+  &__headerTopWrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;

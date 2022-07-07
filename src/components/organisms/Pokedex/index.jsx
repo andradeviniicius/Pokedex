@@ -4,7 +4,7 @@ import './pokedex.scss'
 
 export default function Pokedex() {
   return (
-    <div className="pokedexWrapper">
+    <div className="pokedex">
       <PokedexHeader />
       <PokedexList />
     </div>
