@@ -8,7 +8,8 @@ const pokedexSlice = createSlice({
   },
   reducers: {
     fillPokemons(state, action) {
-      console.log("redux funciona");
+      state.allPokemons = action.payload.pokemons;
+      console.log(state.allPokemons);
     },
   },
 });
