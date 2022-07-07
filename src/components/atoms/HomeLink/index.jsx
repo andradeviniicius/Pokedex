@@ -7,8 +7,8 @@ const HomeLink = ({ text, color }) => {
   }`;
 
   return (
-    <li className={itemClasses}>
-      <Link className="homeHeader__link" to={"/pokedex"}>
+    <Link className={itemClasses} to={"/pokedex"}>
+      <li>
         <img
           className="homeHeader__pokeball homeHeader__pokeball--right"
           src="/assets/pokeball-right-icon.svg"
@@ -24,8 +24,8 @@ const HomeLink = ({ text, color }) => {
             src="/assets/pokeball-left-icon.svg"
           />
         </picture>
-      </Link>
-    </li>
+      </li>
+    </Link>
   );
 };
 

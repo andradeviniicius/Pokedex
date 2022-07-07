@@ -7,7 +7,7 @@ export default function PokedexHeader() {
     <>
       <div className="pokedexHeader">
         <div className="pokedexHeader__mainContainer">
-          <NavArrow goingTo={'/'} />
+          <NavArrow />
           <PokeBurguer />
         </div>
         <MainTitle textContent={"Pokedex"} />
