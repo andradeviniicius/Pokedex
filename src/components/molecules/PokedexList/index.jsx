@@ -6,71 +6,77 @@ export default function PokedexList() {
   const fakeDataArray = [
     {
       id: 1,
-      name: "Bulbasaur",
+      name: "Buur",
       image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
       type: ["grass", "poison"],
     },
     {
       id: 2,
       name: "Ivysaur",
       image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/2.png",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
       type: ["grass", "poison"],
     },
     {
       id: 3,
       name: "Venusaur",
       image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/3.png",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
       type: ["grass", "poison"],
     },
     {
       id: 4,
       name: "Charmander",
       image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/4.png",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
       type: ["Fire"],
     },
     {
       id: 5,
       name: "Charmeleon",
       image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/5.png",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
       type: ["Fire"],
     },
     {
       id: 6,
       name: "Charizard",
       image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/6.png",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
       type: ["Fire", "Flying"],
     },
     {
       id: 7,
       name: "Squirtle",
       image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/7.png",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
       type: ["Water"],
     },
     {
       id: 8,
       name: "Wartortle",
       image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/8.png",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
       type: ["Water"],
     },
     {
       id: 9,
       name: "Blastoise",
       image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/9.png",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
       type: ["Water"],
+    },
+    {
+      id: 10,
+      name: "Pikachu",
+      image:  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+      type: ["Electric"],
     },
   ];
 
   return (
-    <div className="pokedex__list">
+    <ul className="pokedex__list">
       {fakeDataArray.map((item) => {
         return (
           <PokedexItem
@@ -82,6 +88,6 @@ export default function PokedexList() {
           />
         );
       })}
-    </div>
+    </ul>
   );
 }
