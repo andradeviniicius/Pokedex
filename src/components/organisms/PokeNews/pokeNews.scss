@@ -1,8 +1,17 @@
+@use "/public/scss/variables" as *;
+
 .pokeNews {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
+  background-color: $light-gray;
+  padding: 4.1rem 2.8rem 4.8rem;
+  z-index: -1;
+  margin-top: -1.5rem;
 
-  margin: 11.7rem 2.8rem 4.8rem;
+  &__container {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+  }
 }

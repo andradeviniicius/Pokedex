@@ -1,4 +1,5 @@
 import "./homeLink.scss";
+import { Link } from "react-router-dom";
 
 const HomeLink = ({ text, color }) => {
   const itemClasses = `homeHeader__item ${
@@ -11,11 +12,19 @@ const HomeLink = ({ text, color }) => {
         className="homeHeader__pokeball homeHeader__pokeball--right"
         src="/assets/pokeball-right-icon.svg"
       />
-      <a className="homeHeader__link">{text}</a>
-      <img
-        className="homeHeader__pokeball homeHeader__pokeball--left"
-        src="/assets/pokeball-left-icon.svg"
-      />
+      <Link className="homeHeader__link" to={"/pokedex"}>
+        {text}
+      </Link>
+      <picture>
+        <source
+          srcSet="/assets/pokeball-right-icon.svg"
+          media="(min-width: 1024px)"
+        />
+        <img
+          className="homeHeader__pokeball homeHeader__pokeball--left"
+          src="/assets/pokeball-left-icon.svg"
+        />
+      </picture>
     </li>
   );
 };

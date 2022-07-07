@@ -1,0 +1,12 @@
+.pokedexHeader {
+  width: 100%;
+  margin-bottom: 4.2rem;
+
+  
+  &__mainContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3.1rem;
+  }
+}
