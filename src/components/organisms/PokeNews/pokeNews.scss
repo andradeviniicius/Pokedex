@@ -9,9 +9,21 @@
   z-index: -1;
   margin-top: -1.5rem;
 
+  @media screen and (min-width: $desktop) {
+    
+  }
+  
+  
   &__container {
     width: 100%;
     max-width: 50rem;
     margin: 0 auto;
+
+    @media screen and (min-width: $desktop) {
+      max-width: 100rem;
+    }
   }
+
+
+  
 }

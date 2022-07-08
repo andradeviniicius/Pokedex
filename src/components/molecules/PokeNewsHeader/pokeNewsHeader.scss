@@ -1,3 +1,4 @@
+@use "/public/scss/variables" as *;
 .pokeNewsHeader {
   width: 100%;
   display: flex;
@@ -17,5 +18,11 @@
 
     font-size: 1.4rem;
     font-weight: 500;
+
+    @media screen and (min-width: $tablet) {
+      text-align: center;
+      font-size: 2rem;
+    }
+  
   }
 }
