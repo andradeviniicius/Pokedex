@@ -1,8 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { getPokemonData } from "@/services/api";
 import { PokedexItem, LoadingSpinner } from "@atoms";
-import { useSelector, useDispatch } from "react-redux";
-import { pokedexActions } from "@/store";
+import { useSelector } from "react-redux";
 
 import "./pokedexList.scss";
 
@@ -25,13 +24,16 @@ export default function PokedexList() {
   }, [start, end]);
 
   const loadingPokemon = async (data) => {
-    const pokemon = await Promise.all(
+    const pokemons = await Promise.all(
       data.map(async (pokemon) => {
         const pokemonRecord = await getPokemonData(pokemon);
         return pokemonRecord;
       })
     );
-    setPokemonData(pokemon);
+    console.log(pokemons);
+    setPokemonData((state) => {
+      return state.concat(pokemons);
+    });
   };
 
   const addObserver = () => {
@@ -53,6 +55,11 @@ export default function PokedexList() {
     }
   };
 
+  const onClickHandler = () => {
+    setStart(10);
+    setEnd(20);
+  };
+
   return (
     <>
       <ul className="pokedex__list">
@@ -70,6 +77,7 @@ export default function PokedexList() {
           );
         })}
       </ul>
+
       <LoadingSpinner ref={spinnerRef} />
     </>
   );
