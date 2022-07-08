@@ -66,4 +66,15 @@
       display: none;
     }
   }
+  @media screen and (min-width: $tablet) {
+
+    &__text {
+      font-size: 1.8rem;
+      
+    }
+    
+    &__date {
+      font-size: 1.4rem;
+    }
+  }
 }
