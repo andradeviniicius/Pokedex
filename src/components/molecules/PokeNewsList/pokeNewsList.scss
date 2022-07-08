@@ -1,21 +1,22 @@
 @use "/public/scss/variables" as *;
 
-.pokeNews__list {
-  width: 100%;
+.pokeNews {
+  &__list {
+    width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
 
-  @media screen and (min-width: $desktop) {
-    flex-direction: row;
-    justify-content: space-around;
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+      justify-content: space-around;
 
-    &__cardSeparator {
-      display: none;
+      &__cardSeparator {
+        display: none;
+      }
     }
   }
-
 }
