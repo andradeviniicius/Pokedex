@@ -1,7 +1,6 @@
 @use "/public/scss/variables" as *;
 
 .pokedex {
-
   &__item {
     list-style-type: none;
 
@@ -24,7 +23,7 @@
     text-align: right;
   }
   &__pokeName {
-    text-shadow:  .5px .5px 2px black;
+    text-shadow: 0.5px 0.5px 2px black;
     font-weight: 450;
     color: #fff;
     font-size: 1.4rem;
@@ -34,15 +33,16 @@
   &__pokeImage {
     position: absolute;
     bottom: 0;
-    right: -5%;
+    width: 40%;
+    right: 1%;
   }
-  
-  &__background{
+
+  &__background {
     position: absolute;
     bottom: 0;
     right: 0;
   }
-  
+
   &__pokeTypeContainer {
     display: flex;
     flex-direction: column;
