@@ -1,10 +1,10 @@
 import { useEffect, useState, useRef } from "react";
 import { getPokemonData } from "@/services/api";
 import { PokedexItem, LoadingSpinner } from "@atoms";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { pokedexActions } from "@/store";
 
 import "./pokedexList.scss";
-import { current } from "@reduxjs/toolkit";
 
 export default function PokedexList() {
   const allPokemons = useSelector((state) => state.allPokemons);
@@ -19,11 +19,22 @@ export default function PokedexList() {
     const fetch = async () => {
       const slicedPokemons = allPokemons.slice(start, end);
       await loadingPokemon(slicedPokemons);
+      addObserver();
     };
     fetch();
   }, [start, end]);
 
-  useEffect(() => {
+  const loadingPokemon = async (data) => {
+    const pokemon = await Promise.all(
+      data.map(async (pokemon) => {
+        const pokemonRecord = await getPokemonData(pokemon);
+        return pokemonRecord;
+      })
+    );
+    setPokemonData(pokemon);
+  };
+
+  const addObserver = () => {
     const options = {
       threshold: 0.5,
     };
@@ -40,16 +51,6 @@ export default function PokedexList() {
     if (spinnerRef.current) {
       observer.observe(spinnerRef.current);
     }
-  }, []);
-
-  const loadingPokemon = async (data) => {
-    const pokemon = await Promise.all(
-      data.map(async (pokemon) => {
-        const pokemonRecord = await getPokemonData(pokemon);
-        return pokemonRecord;
-      })
-    );
-    setPokemonData(pokemon);
   };
 
   return (

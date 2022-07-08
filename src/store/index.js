@@ -4,7 +4,6 @@ const pokedexSlice = createSlice({
   name: "pokedex",
   initialState: {
     allPokemons: [],
-    displayPokemons: [],
     singlePokemon: {},
   },
   reducers: {
