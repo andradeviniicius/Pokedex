@@ -28,7 +28,7 @@ export default function PokedexList() {
   };
 
   return (
-    <ul className="pokedexList">
+    <ul className="pokedex__list">
       {pokemonData.map((item) => {
         return (
           <PokedexItem
