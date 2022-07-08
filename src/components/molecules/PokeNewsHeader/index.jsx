@@ -1,11 +1,11 @@
 import SubTitle from "@atoms/SubTitle";
-import './pokeNewsHeader.scss'
+import "./pokeNewsHeader.scss";
 
 export default function PokeNewsHeader() {
   return (
-    <div className="pokeNewsHeader">
+    <div className="pokeNews__header">
       <SubTitle textContent={"Pokemon News"} />
-      <button className="pokeNewsHeader__btn">View All</button>
+      <button className="pokeNews__btn">View All</button>
     </div>
   );
 }
