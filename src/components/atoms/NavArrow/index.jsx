@@ -1,15 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-
-import arrowAsset from "@assets/arrow.png";
+import arrowAsset from "@assets/arrow.svg";
 import "./navArrow.scss";
 
 export default function NavArrow({ goingTo }) {
+  const navigate = useNavigate();
+
+  const goBackHandler = () => {
+    navigate(-1);
+  };
+
   return (
     <>
-      <Link className="navArrow" to={goingTo}>
+      <button className="navArrow" onClick={goBackHandler}>
         <img src={arrowAsset} alt="" />
-      </Link>
+      </button>
     </>
   );
 }

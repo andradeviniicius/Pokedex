@@ -6,7 +6,7 @@ export default function PokeType({ type }) {
   return (
     <>
       <div className="pokeType">
-        <p>{type}</p>
+        <p className="pokeType__text">{type}</p>
       </div>
     </>
   );

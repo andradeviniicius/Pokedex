@@ -1,0 +1,19 @@
+.pokeType {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.4rem 1.3rem;
+
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 3.8rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+  text-shadow:  .25px .25px 1px black;
+    
+    font-size: 0.8rem;
+    color: #fff;
+  }
+}

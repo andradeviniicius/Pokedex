@@ -16,3 +16,8 @@ body {
   box-sizing: border-box;
   font-family: $fontFamily;
 }
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
