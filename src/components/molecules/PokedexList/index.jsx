@@ -40,6 +40,6 @@ export default function PokedexList() {
           />
         );
       })}
-    </div>
+    </ul>
   );
 }

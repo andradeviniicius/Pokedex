@@ -1,5 +1,51 @@
-.pokedexItem {
-  width: 15.5rem;
-  height: 11rem;
-  background-color: red;
+@use "/public/scss/variables" as *;
+
+.pokedex {
+
+  &__item {
+    list-style-type: none;
+
+    position: relative;
+    width: 15.5rem;
+    height: 11rem;
+    border-radius: 1.5rem;
+
+    padding: 1rem 1.6rem;
+  }
+
+  &__pokeId {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+
+    color: #000;
+    mix-blend-mode: soft-light;
+
+    text-align: right;
+  }
+  &__pokeName {
+    text-shadow:  .5px .5px 2px black;
+    font-weight: 450;
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  &__pokeImage {
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+  }
+  
+  &__background{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  &__pokeTypeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
 }

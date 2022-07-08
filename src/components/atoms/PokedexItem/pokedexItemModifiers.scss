@@ -1,0 +1,46 @@
+@use "/public/scss/variables" as *;
+
+.pokedex__item{
+
+    &--bug {
+    }
+    &--dragon {
+    }
+    &--fairy {
+    }
+    &--fighting {
+    }
+    &--flying {
+    }
+    &--ghost {
+    }
+    &--ground {
+    }
+    &--ice {
+    }
+    &--normal {
+    }
+    &--poison {
+      background-color: $light-purple;
+    }
+    &--rock {
+    }
+    &--steel {
+    }
+    &--grass {
+      background: #48d0b0;
+    }
+    &--water {
+      background-color: #77bdfe;
+    }
+    &--fire {
+      background-color: #fb6c6c;
+    }
+    &--electric {
+      background-color: #fbcd66;
+    }
+    &--psychic {
+    }
+    &--dark {
+    }
+}
