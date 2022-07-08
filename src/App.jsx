@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux/es/exports";
 import { pokedexActions } from "./store";
-import getAllPokemons from "./services/api";
+import { getAllPokemons } from "./services/api";
 import { HomePage, PokedexPage } from "@pages";
 import { Route, Routes } from "react-router-dom";
 

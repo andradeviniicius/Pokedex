@@ -1,7 +1,7 @@
 const url = "https://pokeapi.co/api/v2/";
 
-export default async function getAllPokemons() {
-  const apiUrl = url + "pokemon";
+export async function getAllPokemons() {
+  const apiUrl = url + "pokemon?limit=151&offset=0";
   const response = await fetch(apiUrl);
 
   if (!response.ok) {
@@ -22,4 +22,15 @@ export default async function getAllPokemons() {
   }
 
   return pokemons;
+}
+
+export async function getPokemonData(pokemonData) {
+  const response = await fetch(pokemonData.url);
+
+  if (!response.ok) {
+    throw new Error("Error!");
+  }
+
+  const data = await response.json();
+  return data;
 }
