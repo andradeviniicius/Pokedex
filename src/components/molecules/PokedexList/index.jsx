@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getPokemonData } from "@/services/api";
-import { PokedexItem } from "@atoms";
+import { PokedexItem, LoadingSpinner } from "@atoms";
 import { useSelector } from "react-redux";
 
 import "./pokedexList.scss";
@@ -28,18 +28,23 @@ export default function PokedexList() {
   };
 
   return (
-    <ul className="pokedex__list">
-      {pokemonData.map((item) => {
-        return (
-          <PokedexItem
-            key={item.id}
-            pokeId={item.id}
-            pokeName={item.name}
-            pokeImage={item.sprites.other["official-artwork"]["front_default"]}
-            pokeType={item.types}
-          />
-        );
-      })}
-    </ul>
+    <>
+      <ul className="pokedex__list">
+        {pokemonData.map((item) => {
+          return (
+            <PokedexItem
+              key={item.id}
+              pokeId={item.id}
+              pokeName={item.name}
+              pokeImage={
+                item.sprites.other["official-artwork"]["front_default"]
+              }
+              pokeType={item.types}
+            />
+          );
+        })}
+      </ul>
+      <LoadingSpinner />
+    </>
   );
 }
