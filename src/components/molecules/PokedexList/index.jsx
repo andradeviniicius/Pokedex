@@ -28,14 +28,14 @@ export default function PokedexList() {
   };
 
   return (
-    <div className="pokedexList">
+    <ul className="pokedexList">
       {pokemonData.map((item) => {
         return (
           <PokedexItem
             key={item.id}
             pokeId={item.id}
             pokeName={item.name}
-            pokeImage={item.sprites["front_default"]}
+            pokeImage={item.sprites.other["official-artwork"]["front_default"]}
             pokeType={item.types}
           />
         );
