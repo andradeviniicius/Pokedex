@@ -1,7 +1,9 @@
+import React from "react";
+
 import "./loadingSpinner.scss";
 
-const LoadingSpinner = () => {
-  return <div className="spinner"></div>;
-};
+const LoadingSpinner = React.forwardRef((props, ref) => {
+  return <div className="spinner" ref={ref}></div>;
+});
 
 export default LoadingSpinner;

@@ -1,20 +1,45 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { getPokemonData } from "@/services/api";
 import { PokedexItem, LoadingSpinner } from "@atoms";
 import { useSelector } from "react-redux";
 
 import "./pokedexList.scss";
+import { current } from "@reduxjs/toolkit";
 
 export default function PokedexList() {
   const allPokemons = useSelector((state) => state.allPokemons);
   const [pokemonData, setPokemonData] = useState([]);
 
+  const [start, setStart] = useState(0);
+  const [end, setEnd] = useState(10);
+
+  const spinnerRef = useRef();
+
   useEffect(() => {
     const fetch = async () => {
-      await loadingPokemon(allPokemons);
+      const slicedPokemons = allPokemons.slice(start, end);
+      await loadingPokemon(slicedPokemons);
+    };
+    fetch();
+  }, [start, end]);
+
+  useEffect(() => {
+    const options = {
+      threshold: 0.5,
     };
 
-    fetch();
+    const observer = new IntersectionObserver((elements) => {
+      const spinner = elements[0];
+
+      if (spinner.isIntersecting) {
+        setStart(10);
+        setEnd(20);
+      }
+    }, options);
+
+    if (spinnerRef.current) {
+      observer.observe(spinnerRef.current);
+    }
   }, []);
 
   const loadingPokemon = async (data) => {
@@ -44,7 +69,7 @@ export default function PokedexList() {
           );
         })}
       </ul>
-      <LoadingSpinner />
+      <LoadingSpinner ref={spinnerRef} />
     </>
   );
 }
