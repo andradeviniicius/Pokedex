@@ -9,7 +9,7 @@
     height: 11rem;
     border-radius: 1.5rem;
 
-    padding: 1rem 1.6rem;
+    padding: 4% 7.5%;
 
     &:hover {
       transform: scale(1.05);
@@ -37,7 +37,7 @@
     color: #fff;
     font-size: 1.4rem;
     line-height: 1.4rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 3.5%;
   }
   &__pokeImage {
     position: absolute;
@@ -65,6 +65,41 @@
     .pokedex {
       &__pokeImage {
         max-height: 80%;
+      }
+    }
+  }
+  
+  @media screen and (min-width: $desktop) {
+    .pokedex {
+      &__item {
+        height: 30rem;
+      }
+      &__pokeName {
+        font-size: 1.8rem;
+        
+      }
+      &__pokeId {
+        font-size: 2.4rem;
+      }
+    }
+  }
+  @media screen and (min-width: $desktop-m) {
+    .pokedex {
+      &__pokeName {
+        font-size: 1.8rem;
+      
+      }
+
+    }
+  }
+  @media screen and (min-width: $desktop-x) {
+    .pokedex {
+      &__item {
+        max-width: 67rem;
+      }
+      &__pokeName {
+        font-size: 1.8rem;
+      
       }
     }
   }

@@ -1,7 +1,17 @@
+@use "/public/scss/variables" as *;
+
 .pokedex__list {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    gap: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 1rem;
+
+}
+@media screen and (min-width: $desktop-x) {
+  .pokedex {
+    &__list {
+      width: 60%;
+    }
+  }
 }
