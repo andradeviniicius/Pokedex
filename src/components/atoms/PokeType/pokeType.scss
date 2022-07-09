@@ -1,3 +1,5 @@
+@use "/public/scss/variables" as *;
+
 .pokeType {
   width: fit-content;
   height: fit-content;
@@ -15,5 +17,15 @@
     
     font-size: 0.8rem;
     color: #fff;
+  }
+
+  @media screen and (min-width: $tablet) {
+    .pokeType {
+      width: 7rem;
+      height: 2.8rem;
+      &__text {
+        font-size: 1.4rem;
+      }
+    }
   }
 }
