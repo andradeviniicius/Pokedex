@@ -15,6 +15,28 @@ html {
 body {
   box-sizing: border-box;
   font-family: $fontFamily;
+
+  
+  background: rgb(226, 226, 226);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(226, 226, 226, 1) 5%,
+    rgba(232, 232, 232, 1) 13%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(226, 226, 226, 1) 5%,
+    rgba(232, 232, 232, 1) 13%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(226, 226, 226, 1) 5%,
+    rgba(232, 232, 232, 1) 13%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2e2e2",endColorstr="#ffffff",GradientType=1);
 }
 
 a {
