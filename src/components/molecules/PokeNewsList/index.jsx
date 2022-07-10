@@ -1,18 +1,13 @@
 import { PokeNewsItem } from "@atoms";
 import { useEffect } from "react";
-import { fetchPokeNews } from "@/services/newsApi";
+
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 import "./pokeNewsList.scss";
 
 export default function PokeNewsList() {
-  useEffect(() => {
-    const getPokeNews = async () => {
-      const pokeNews = await fetchPokeNews();
-      console.log(pokeNews);
-    };
-
-    getPokeNews()
-  }, []);
+  const pokeNews = useSelector((state) => state.pokeNews.allNews);
+  console.log(pokeNews);
 
   return (
     <div className="pokeNews__list">
