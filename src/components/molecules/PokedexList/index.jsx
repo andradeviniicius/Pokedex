@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPokemonData } from "@/services/api";
+import { getPokemonData } from "@allServices/pokedexApi";
 import { PokedexItem } from "@atoms";
 import { useSelector } from "react-redux";
 

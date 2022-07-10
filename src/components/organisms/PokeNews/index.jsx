@@ -2,9 +2,9 @@ import { PokeNewsHeader, PokeNewsList } from "@molecules";
 import { useEffect } from "react";
 
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
-import { pokeNewsActions } from "./../../../store/index";
 
-import { fetchPokeNews } from "./../../../services/newsApi";
+import { pokeNewsActions } from "@reduxStore";
+import { fetchPokeNews } from "@allServices/newsApi";
 
 import "./pokeNews.scss";
 
