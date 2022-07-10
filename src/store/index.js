@@ -13,9 +13,24 @@ const pokedexSlice = createSlice({
   },
 });
 
+const pokeNewsSlice = createSlice({
+  name: "pokeNews",
+  initialState: {
+    allNews: [],
+  },
+  reducers: {
+    fillNews(state, action) {
+      state.allNews = action.payload.news;
+    },
+  },
+});
+
 const store = configureStore({
-  reducer: pokedexSlice.reducer,
+  reducer: { pokedex: pokedexSlice.reducer, pokeNews: pokeNewsSlice.reducer },
 });
 
 export const pokedexActions = pokedexSlice.actions;
+
+export const pokeNewsActions = pokeNewsSlice.actions;
+
 export default store;
