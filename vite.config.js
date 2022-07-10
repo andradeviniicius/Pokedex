@@ -12,6 +12,8 @@ export default defineConfig({
       "@organisms": path.resolve(__dirname, "./src/components/organisms"),
       "@pages": path.resolve(__dirname, "./src/components/pages"),
       "@assets": path.resolve(__dirname, "./public/assets"),
+      "@allServices": path.resolve(__dirname, "./src/services/"),      
+      "@reduxStore": path.resolve(__dirname, "./src/store/index.js"),      
     },
   },
   plugins: [react()],
