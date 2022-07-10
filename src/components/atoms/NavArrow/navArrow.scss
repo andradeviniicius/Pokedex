@@ -1,9 +1,27 @@
+@use "/public/scss/variables" as *;
+
 .navArrow {
   background: none;
   color: #6c79db;
   border: none;
-  padding: 0;
+  padding: 1%;
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  border-radius: 49%;
+
+  &:hover{
+    transition: .15s;
+    background-color: #a3a3a368;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .navArrow {
+    padding: 1%;
+    &__image {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
 }
