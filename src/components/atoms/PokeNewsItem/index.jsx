@@ -1,5 +1,4 @@
 import "./pokeNewsItem.scss";
-import pokeRush from "@assets/article01.png";
 
 export default function PokeNewsItem({ title, date, image }) {
   return (
