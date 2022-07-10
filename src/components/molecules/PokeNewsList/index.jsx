@@ -7,13 +7,18 @@ import "./pokeNewsList.scss";
 
 export default function PokeNewsList() {
   const pokeNews = useSelector((state) => state.pokeNews.allNews);
-  console.log(pokeNews);
 
   return (
     <div className="pokeNews__list">
-      <PokeNewsItem />
-      <PokeNewsItem />
-      <PokeNewsItem />
+      {pokeNews.map((data) => {
+        return (
+          <PokeNewsItem
+            title={data.title}
+            date={data.publishedAt}
+            image={data.urlToImage}
+          />
+        );
+      })}
     </div>
   );
 }
