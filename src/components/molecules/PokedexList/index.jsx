@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { getPokemonData } from "@/services/api";
+import { getPokemonData } from "@allServices/pokedexApi";
 import { PokedexItem } from "@atoms";
 import { useSelector } from "react-redux";
 
 import "./pokedexList.scss";
 
 export default function PokedexList() {
-  const allPokemons = useSelector((state) => state.allPokemons);
+  const allPokemons = useSelector((state) => state.pokedex.allPokemons);
   const [pokemonData, setPokemonData] = useState([]);
 
   useEffect(() => {
