@@ -55,11 +55,6 @@ export default function PokedexList() {
     }
   };
 
-  const onClickHandler = () => {
-    setStart(10);
-    setEnd(20);
-  };
-
   return (
     <>
       <ul className="pokedex__list">
