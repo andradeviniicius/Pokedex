@@ -15,6 +15,7 @@ export default function PokeNewsList() {
           key={index}
             apiData={data}
             dataIndex={index}
+
           />
         );
       })}

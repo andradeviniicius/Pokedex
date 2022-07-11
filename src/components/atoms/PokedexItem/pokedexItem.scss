@@ -68,7 +68,7 @@
       }
     }
   }
-  
+
   @media screen and (min-width: $desktop) {
     .pokedex {
       &__item {
@@ -76,7 +76,6 @@
       }
       &__pokeName {
         font-size: 1.8rem;
-        
       }
       &__pokeId {
         font-size: 2.4rem;
@@ -87,9 +86,7 @@
     .pokedex {
       &__pokeName {
         font-size: 1.8rem;
-      
       }
-
     }
   }
   @media screen and (min-width: $desktop-x) {
@@ -99,7 +96,6 @@
       }
       &__pokeName {
         font-size: 1.8rem;
-      
       }
     }
   }

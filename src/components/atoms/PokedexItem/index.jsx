@@ -26,7 +26,7 @@ export default function PokedexItem({ pokeName, pokeImage, pokeType, pokeId }) {
           <p className="pokedex__pokeName">{capitalFirstLetter(pokeName)}</p>
           <div className="pokedex__pokeTypeContainer">
             {pokeType.map((data) => {
-              return <PokeType type={data.type.name} />;
+              return <PokeType key={data.type.name} type={data.type.name} />;
             })}
           </div>
 
