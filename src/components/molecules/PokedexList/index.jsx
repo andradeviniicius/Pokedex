@@ -37,7 +37,6 @@ export default function PokedexList() {
         return pokemonRecord;
       })
     );
-    console.log(pokemons);
     setPokemonData((state) => {
       return state.concat(pokemons);
     });
