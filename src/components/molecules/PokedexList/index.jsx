@@ -2,16 +2,18 @@ import { useEffect, useState, useRef } from "react";
 import { getPokemonData } from "@/services/api";
 import { PokedexItem, LoadingSpinner } from "@atoms";
 import { useSelector } from "react-redux";
+import useLazy from "@/hooks/useLazy";
 
 import "./pokedexList.scss";
 
 export default function PokedexList() {
   const allPokemons = useSelector((state) => state.allPokemons);
+
   const [pokemonData, setPokemonData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [dataHasEnd, setDataHasEnd] = useState(false);
-  const [start, setStart] = useState(0);
-  const [end, setEnd] = useState(10);
+
+  const [start, end, addObserver] = useLazy(10, isLoading, setIsLoading);
 
   const spinnerRef = useRef();
 
@@ -25,7 +27,7 @@ export default function PokedexList() {
         slicedPokemons = allPokemons.slice(start, end);
       }
       await loadingPokemon(slicedPokemons);
-      addObserver();
+      addObserver(spinnerRef.current);
     };
     fetch();
   }, [start, end]);
@@ -41,30 +43,6 @@ export default function PokedexList() {
       return state.concat(pokemons);
     });
     setIsLoading(false);
-  };
-
-  const addObserver = () => {
-    const options = {
-      threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver((elements) => {
-      const spinner = elements[0];
-
-      if (spinner.isIntersecting && !isLoading) {
-        setStart((state) => {
-          return (state = state + 10);
-        });
-        setEnd((state) => {
-          return (state = state + 10);
-        });
-        setIsLoading(true);
-      }
-    }, options);
-
-    if (spinnerRef.current) {
-      observer.observe(spinnerRef.current);
-    }
   };
 
   return (
