@@ -27,7 +27,7 @@ export default function DetailArticleContent({
       </p>
 
       <p className="detailArticle__errorMessage">
-        Sorry, this page is only available in Mobile devices, but you can check the whole article <a href={originalPost}>here</a> we're trying to fix this issue as soon as possible  :((
+        Sorry, this page is only available in Mobile devices, but you can check the whole article <a target={'__blank'} href={originalPost}>here</a> we're trying to fix this issue as soon as possible  :((
         <br />
       </p>
     </div>
