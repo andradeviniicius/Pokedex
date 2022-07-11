@@ -27,9 +27,8 @@ export default function DetailArticleContent({
       </p>
 
       <p className="detailArticle__errorMessage">
-        Sorry, we're having trouble with this page in Desktop devices :((
+        Sorry, this page is only available in Mobile devices, but you can check the whole article <a href={originalPost}>here</a> we're trying to fix this issue as soon as possible  :((
         <br />
-        <Link to={"/"}>Click here to go back</Link>
       </p>
     </div>
   );
