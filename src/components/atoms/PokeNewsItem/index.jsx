@@ -1,20 +1,28 @@
 import "./pokeNewsItem.scss";
-import pokeRush from "@assets/article01.png";
 
-export default function PokeNewsItem() {
+import { Link } from "react-router-dom";
+
+export default function PokeNewsItem({ apiData, dataIndex }) {
+  const javascriptDate = new Date(apiData.publishedAt).toLocaleDateString(
+    "en-gb",
+    { year: "numeric", month: "long", day: "2-digit" }
+  );
+
   return (
     <>
-      <div className="pokeNewsItem">
+      <Link className="pokeNewsItem" to={`/detailArticle/${dataIndex}`}>
         <div className="pokeNewsItem__leftContainer">
-          <p className="pokeNewsItem__text">
-            Pokémon Rumblee Rush Arrives Soon
-          </p>
-          <p className="pokeNewsItem__date">15 May 2019</p>
+          <p className="pokeNewsItem__text">{apiData.title}</p>
+          <p className="pokeNewsItem__date">{javascriptDate}</p>
         </div>
         <div className="pokeNewsItem__rightContainer">
-          <img className="pokeNewsItem__image" src={pokeRush} alt="" />
+          <img
+            className="pokeNewsItem__image"
+            src={apiData.urlToImage}
+            alt=""
+          />
         </div>
-      </div>
+      </Link>
       <hr className="pokeNewsItem__cardSeparator" />
     </>
   );

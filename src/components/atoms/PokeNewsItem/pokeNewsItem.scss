@@ -7,6 +7,8 @@
   justify-content: center;
   align-items: center;
 
+  cursor: pointer;
+
   &__leftContainer {
     width: 66%;
     padding-right: 4.4rem;
@@ -47,6 +49,8 @@
     flex-direction: column-reverse;
     justify-content: center;
 
+    width: 31%  ;
+
     &__text {
       font-size: 2.4rem;
       margin-top: 4.1rem;
@@ -64,6 +68,9 @@
     }
     &__cardSeparator {
       display: none;
+    }
+    &__image {
+      height: 17.2rem;
     }
   }
   @media screen and (min-width: $tablet) {

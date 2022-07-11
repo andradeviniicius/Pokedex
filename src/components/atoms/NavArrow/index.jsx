@@ -13,7 +13,7 @@ export default function NavArrow({ goingTo }) {
   return (
     <>
       <button className="navArrow" onClick={goBackHandler}>
-        <img src={arrowAsset} alt="" />
+        <img className="navArrow__image" src={arrowAsset} alt="" />
       </button>
     </>
   );
