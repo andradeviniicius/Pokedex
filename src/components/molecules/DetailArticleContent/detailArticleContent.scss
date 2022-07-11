@@ -17,6 +17,17 @@
     color: #303943;
     opacity: 0.6;
   }
+  &__errorMessage {
+    font-size: 4.4rem;
+    color: #303943;
+    opacity: 0.6;
+    display: none;
+    margin-top: 20%;
+    a{
+      color: #2371c9;
+      text-decoration: underline;
+    }
+  }
   &__link {
     cursor: pointer;
     color: blue;
@@ -25,10 +36,23 @@
       color: purple;
     }
   }
-
 }
 @media (min-width: 769px) {
   .detailArticle {
-    display: none;
+    &__image {
+      display: none;
+    }
+    &__date {
+      display: none;
+    }
+    &__description {
+      display: none;
+    }
+    &__errorMessage {
+      display: block;
+    }
+    &__link {
+      display: none;
+    }
   }
 }
