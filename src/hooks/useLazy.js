@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useLazy = (quantity) => {
+const useLazy = (quantity, isLoading, setIsLoading) => {
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(quantity);
 
@@ -27,6 +27,8 @@ const useLazy = (quantity) => {
       observer.observe(element);
     }
   };
+
+  return [start, end, addObserver];
 };
 
 export default useLazy;
