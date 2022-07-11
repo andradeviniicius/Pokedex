@@ -7,7 +7,6 @@ import "./pokeNewsList.scss";
 
 export default function PokeNewsList() {
   const pokeNews = useSelector((state) => state.pokeNews.allNews);
-  console.log('pokenews',pokeNews);
   return (
     <div className="pokeNews__list">
       {pokeNews.map((data, index) => {

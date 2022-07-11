@@ -1,0 +1,14 @@
+.detailArticle {
+  &__header {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  &__headerTopWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3.1rem;
+  }
+}
