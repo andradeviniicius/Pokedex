@@ -1,0 +1,24 @@
+.detailArticle {
+  &__content {
+  }
+  &__image {
+    width: 100%;
+    border-radius: 25px;
+  }
+  &__date {
+    opacity: 0.6;
+    font-weight: 450;
+  }
+  &__description {
+    font-weight: 450;
+    font-size: 1.4rem;
+    color: #303943;
+    opacity: 0.6;
+  }
+
+}
+@media (min-width: 425px) {
+  .detailArticle {
+    display: none;
+  }
+}
