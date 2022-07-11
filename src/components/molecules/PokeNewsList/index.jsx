@@ -13,6 +13,7 @@ export default function PokeNewsList() {
       {pokeNews.map((data) => {
         return (
           <PokeNewsItem
+            key={data.title}
             title={data.title}
             date={data.publishedAt}
             image={data.urlToImage}
