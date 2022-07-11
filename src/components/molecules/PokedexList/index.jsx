@@ -8,7 +8,8 @@ import "./pokedexList.scss";
 export default function PokedexList() {
   const allPokemons = useSelector((state) => state.allPokemons);
   const [pokemonData, setPokemonData] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [dataHasEnd, setDataHasEnd] = useState(false);
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(10);
 
@@ -16,7 +17,13 @@ export default function PokedexList() {
 
   useEffect(() => {
     const fetch = async () => {
-      const slicedPokemons = allPokemons.slice(start, end);
+      let slicedPokemons;
+      if (end >= allPokemons.length) {
+        slicedPokemons = allPokemons.slice(start, allPokemons.length);
+        setDataHasEnd(true);
+      } else {
+        slicedPokemons = allPokemons.slice(start, end);
+      }
       await loadingPokemon(slicedPokemons);
       addObserver();
     };
@@ -34,6 +41,7 @@ export default function PokedexList() {
     setPokemonData((state) => {
       return state.concat(pokemons);
     });
+    setIsLoading(false);
   };
 
   const addObserver = () => {
@@ -44,9 +52,14 @@ export default function PokedexList() {
     const observer = new IntersectionObserver((elements) => {
       const spinner = elements[0];
 
-      if (spinner.isIntersecting) {
-        setStart(10);
-        setEnd(20);
+      if (spinner.isIntersecting && !isLoading) {
+        setStart((state) => {
+          return (state = state + 10);
+        });
+        setEnd((state) => {
+          return (state = state + 10);
+        });
+        setIsLoading(true);
       }
     }, options);
 
@@ -73,7 +86,7 @@ export default function PokedexList() {
         })}
       </ul>
 
-      <LoadingSpinner ref={spinnerRef} />
+      {!dataHasEnd && <LoadingSpinner ref={spinnerRef} />}
     </>
   );
 }
