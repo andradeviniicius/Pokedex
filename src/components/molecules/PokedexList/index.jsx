@@ -47,10 +47,10 @@ export default function PokedexList() {
   return (
     <>
       <ul className="pokedex__list">
-        {pokemonData.map((item) => {
+        {pokemonData.map((item,index) => {
           return (
             <PokedexItem
-              key={item.id}
+              key={index}
               pokeId={item.id}
               pokeName={item.name}
               pokeImage={
