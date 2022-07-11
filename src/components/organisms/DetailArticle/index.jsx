@@ -26,6 +26,7 @@ export default function DetailArticle() {
         date={javascriptDate}
         title={pokeNews[articleIndex].title}
         description={pokeNews[articleIndex].description}
+        originalPost={pokeNews[articleIndex].url}
       />
     </div>
   );

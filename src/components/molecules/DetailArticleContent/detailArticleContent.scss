@@ -4,10 +4,12 @@
   &__image {
     width: 100%;
     border-radius: 25px;
+    margin-bottom: 3.3rem;
   }
   &__date {
     opacity: 0.6;
     font-weight: 450;
+    margin: 1.9rem 0rem;
   }
   &__description {
     font-weight: 450;
@@ -15,9 +17,17 @@
     color: #303943;
     opacity: 0.6;
   }
+  &__link {
+    cursor: pointer;
+    color: blue;
+
+    :visited {
+      color: purple;
+    }
+  }
 
 }
-@media (min-width: 425px) {
+@media (min-width: 769px) {
   .detailArticle {
     display: none;
   }
