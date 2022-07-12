@@ -5,10 +5,14 @@ const pokedexSlice = createSlice({
   initialState: {
     allPokemons: [],
     singlePokemon: {},
+    pokeSearch: [],
   },
   reducers: {
     fillPokemons(state, action) {
       state.allPokemons = action.payload.pokemons;
+    },
+    setPokeNameSearch(state, action) {
+      state.pokeSearch = action.payload.newPokeSearch;
     },
   },
 });

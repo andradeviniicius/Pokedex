@@ -1,13 +1,15 @@
 import { MainTitle, SearchInput } from "@atoms";
-import filterPokemon from "@utils";
+import {filterPokemon} from "@utils";
 import "./homeSearch.scss";
 
 import { useRef } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { pokedexActions } from "@reduxStore"
 
 const HomeSearch = () => {
   const allPokemons = useSelector((state) => state.pokedex.allPokemons);
   const inputRef = useRef();
+  const dispatch = useDispatch();
 
   function submitHandler(e) {
     e.preventDefault();
@@ -15,6 +17,7 @@ const HomeSearch = () => {
       return filterPokemon(e, inputRef.current.value);
     });
     console.log(filteredPokemon);
+    dispatch(pokedexActions.setPokeNameSearch({ newPokeSearch: filteredPokemon }));
   }
   return (
     <form onSubmit={submitHandler} className="homeHeader__form">
