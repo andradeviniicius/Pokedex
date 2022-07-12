@@ -1,6 +1,7 @@
 import "./searchInput.scss";
 
-const SearchInput = () => {
+const SearchInput = ({setRef}) => {
+
   return (
     <div className="homeHeader__search">
       <button className="homeHeader__button">
@@ -10,7 +11,7 @@ const SearchInput = () => {
           alt="Search Button"
         />
       </button>
-      <input
+      <input ref={setRef}
         className="homeHeader__input"
         placeholder="Search Pokemon, Move, Ability etc"
       ></input>
