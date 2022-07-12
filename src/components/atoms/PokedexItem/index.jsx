@@ -3,19 +3,14 @@ import { flushSync } from "react-dom";
 
 import { useNavigate } from "react-router-dom";
 
+import {addExtraZero, capitalFirstLetter} from "@utils";
+
 import "./pokedexItem.scss";
 import "./pokedexItemModifiers.scss";
 
 export default function PokedexItem({ pokeName, pokeImage, pokeType, pokeId }) {
   const navigate = useNavigate();
-  function addExtraZero(num, totalLenght) {
-    return String(num).padStart(totalLenght, "0");
-  }
-
-  function capitalFirstLetter(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
+  
   function changePages() {
     navigate(`/pokedex/aboutPokemon/${pokeId}`);
   }
