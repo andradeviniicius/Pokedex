@@ -1,23 +1,19 @@
 import { MainTitle, SearchInput } from "@atoms";
-import {filterPokemon} from "@utils";
 import "./homeSearch.scss";
 
+import { useNavigate, createSearchParams } from "react-router-dom";
+
 import { useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { pokedexActions } from "@reduxStore"
 
 const HomeSearch = () => {
-  const allPokemons = useSelector((state) => state.pokedex.allPokemons);
   const inputRef = useRef();
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   function submitHandler(e) {
     e.preventDefault();
-    const filteredPokemon = allPokemons.filter((e) => {
-      return filterPokemon(e, inputRef.current.value);
-    });
-    console.log(filteredPokemon);
-    dispatch(pokedexActions.setPokeNameSearch({ newPokeSearch: filteredPokemon }));
+    navigate(
+      `/pokedex?${createSearchParams({ q: inputRef.current.value })}`
+    );
   }
   return (
     <form onSubmit={submitHandler} className="homeHeader__form">
