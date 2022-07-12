@@ -11,9 +11,6 @@ const pokedexSlice = createSlice({
     fillPokemons(state, action) {
       state.allPokemons = action.payload.pokemons;
     },
-    setPokeNameSearch(state, action) {
-      state.pokeSearch = action.payload.newPokeSearch;
-    },
   },
 });
 
