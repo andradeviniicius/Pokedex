@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
 
-import { pokeNewsActions } from "@reduxStore";
+import { pokeNewsActions } from "@reduxStore/pokeNews";
 import { fetchPokeNews } from "@allServices/newsApi";
 
 import "./pokeNews.scss";

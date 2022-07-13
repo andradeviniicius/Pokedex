@@ -14,7 +14,7 @@ export default defineConfig({
       "@assets": path.resolve(__dirname, "./public/assets"),
       "@utils": path.resolve(__dirname, "./src/utils/index.js"),
       "@allServices": path.resolve(__dirname, "./src/services/"),
-      "@reduxStore": path.resolve(__dirname, "./src/store/index.js"),
+      "@reduxStore": path.resolve(__dirname, "./src/store/"),
     },
   },
   plugins: [react()],

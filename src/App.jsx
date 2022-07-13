@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 
 import { useDispatch } from "react-redux/es/exports";
 
-import { pokedexActions } from "@reduxStore";
+import { pokedexActions } from "@reduxStore/pokedex.js";
 import { getAllPokemons } from "@allServices/pokedexApi";
 
 import { HomePage, PokedexPage, DetailArticlePage } from "@pages";
