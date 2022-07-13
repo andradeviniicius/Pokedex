@@ -12,16 +12,6 @@ import "./pokedexList.scss";
 
 export default function PokedexList() {
   const loc = useLocation();
-  console.log(loc);
-
-  let allPokemons = useSelector((state) => state.pokedex.allPokemons);
-  if (loc.search.includes("?q=")) {
-    allPokemons = allPokemons.filter((item) => {
-      return filterPokemon(item, loc.search.slice(3));
-    });
-  } else {
-    loc.search = ''
-  }
 
   const [pokemonData, setPokemonData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -31,7 +21,16 @@ export default function PokedexList() {
 
   const spinnerRef = useRef();
 
+  let allPokemons = useSelector((state) => state.pokedex.allPokemons);
+
   useEffect(() => {
+    if (loc.search.includes("?q=")) {
+      allPokemons = allPokemons.filter((item) => {
+        return filterPokemon(item, loc.search.slice(3));
+      });
+    } else {
+      loc.search = "";
+    }
     const fetch = async () => {
       let slicedPokemons;
       if (end >= allPokemons.length) {
