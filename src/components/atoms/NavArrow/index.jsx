@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import arrowAsset from "@assets/arrow.svg";
 import "./navArrow.scss";
 
-export default function NavArrow({ goingTo }) {
+export default function NavArrow() {
   const navigate = useNavigate();
 
   const goBackHandler = () => {

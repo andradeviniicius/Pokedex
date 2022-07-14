@@ -7,7 +7,7 @@ export default function DetailArticleHeader() {
     <>
       <div className="detailArticle__header">
         <div className="detailArticle__headerTopWrapper">
-          <NavArrow goingTo={'/'} />
+          <NavArrow />
         </div>
       </div>
     </>
