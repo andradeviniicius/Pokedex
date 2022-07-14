@@ -13,10 +13,19 @@
   align-items: center;
 
   &__text {
-  text-shadow:  .25px .25px 1px black;
-    
+    text-shadow: 0.25px 0.25px 1px black;
+
     font-size: 0.8rem;
     color: #fff;
+  }
+
+  &--big {
+    padding: 0.6rem 1.8rem;
+    margin-right: 0.7rem;
+  }
+
+  &--big &__text {
+    font-size: 1.2rem;
   }
 
   @media screen and (min-width: $tablet) {

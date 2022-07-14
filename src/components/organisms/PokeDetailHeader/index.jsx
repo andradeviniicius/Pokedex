@@ -1,4 +1,5 @@
 import { PokeDetailBasicInfo } from "@molecules";
+import "./pokeDetailHeader.scss";
 
 const PokeDetailHeader = () => {
   return (
