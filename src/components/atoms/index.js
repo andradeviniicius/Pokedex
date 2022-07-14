@@ -14,6 +14,7 @@ export { default as PokeSize } from "./PokeSize";
 export { default as PokeInfoItem } from "./PokeInfoItem";
 export { default as PokeGenderItem } from "./PokeGenderItem";
 export { default as PokeStatsBar } from "./PokeStatsBar";
+export { default as EvolutionChainItem } from "./EvolutionChainItem";
 
 export { default as PokedexItem } from "./PokedexItem";
 export { default as PokeType } from "./PokeType";
