@@ -4,12 +4,16 @@ import arrowAsset from "@assets/arrow.svg";
 import whiteArrowAsset from "@assets/white-arrow.svg";
 import "./navArrow.scss";
 
-export default function NavArrow({ isWhite }) {
+export default function NavArrow({ goingTo, isWhite }) {
   const navigate = useNavigate();
   const location = useLocation();
 
   const goBackHandler = () => {
-    navigate(-1);
+    if (goingTo) {
+      navigate(goingTo);
+    } else {
+      navigate(-1);
+    }
   };
 
   return (

@@ -8,7 +8,7 @@ const PokeDetailBasicInfo = () => {
   return (
     <>
       <section className="pokeDetail__actions">
-        <NavArrow isWhite="true" />
+        <NavArrow goingTo={"/pokedex"} isWhite="true" />
         <LikeButton />
       </section>
       <section className="pokeDetail__title">
