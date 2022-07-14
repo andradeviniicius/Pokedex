@@ -11,6 +11,8 @@ export { default as PokeBurguer } from "./PokeBurguer";
 
 export { default as PokeLink } from "./PokeLink";
 export { default as PokeSize } from "./PokeSize";
+export { default as PokeInfoItem } from "./PokeInfoItem";
+export { default as PokeGenderItem } from "./PokeGenderItem";
 
 export { default as PokedexItem } from "./PokedexItem";
 export { default as PokeType } from "./PokeType";
