@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import arrowAsset from "@assets/arrow.svg";
 import whiteArrowAsset from "@assets/white-arrow.svg";
@@ -6,6 +6,7 @@ import "./navArrow.scss";
 
 export default function NavArrow({ isWhite }) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const goBackHandler = () => {
     navigate(-1);

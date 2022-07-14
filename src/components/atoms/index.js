@@ -18,3 +18,5 @@ export { default as PokedexItem } from "./PokedexItem";
 export { default as PokeType } from "./PokeType";
 
 export { default as LoadingSpinner } from "./LoadingSpinner";
+
+export { default as LikeButton } from "./LikeButton";
