@@ -1,0 +1,16 @@
+@use "/public/scss/variables" as *;
+
+.pokeDetail {
+  &__link {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: rgba($dark-gray, 0.4);
+    cursor: pointer;
+    padding-bottom: 1rem;
+
+    &--active {
+      color: $dark-gray;
+      border-bottom: 2px solid $deep-purple;
+    }
+  }
+}
