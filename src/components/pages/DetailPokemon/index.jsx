@@ -8,7 +8,8 @@ const DetailPokemonPage = () => {
     <main className="pokeDetail">
       <PokeDetailHeader />
       <section className="pokeDetail__content">
-        <PokeNavigation />{" "}
+        <PokeNavigation />
+        <div className="pokeDetail__data">test</div>
       </section>
     </main>
   );
