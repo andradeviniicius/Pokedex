@@ -1,0 +1,13 @@
+.pokeAbout {
+  &__genderControl {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__genderIcon {
+    margin-right: 0.5rem;
+  }
+}

@@ -1,0 +1,50 @@
+@use "/public/scss/variables" as *;
+
+.pokeDetail {
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__number {
+    font-size: 1.8rem;
+    color: $white;
+    font-weight: bold;
+  }
+
+  &__type {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.9rem;
+  }
+
+  &__badges {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__species {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: $white;
+    font-weight: normal;
+  }
+  &__pokemon {
+    background-image: url("/public/assets/back-pokeball.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 65%;
+  }
+}
