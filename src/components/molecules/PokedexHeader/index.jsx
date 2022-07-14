@@ -7,7 +7,7 @@ export default function PokedexHeader() {
     <>
       <div className="pokedex__header">
         <div className="pokedex__headerTopWrapper">
-          <NavArrow />
+          <NavArrow goingTo={'/'} />
           <ToggleViewButton />
         </div>
         <MainTitle textContent={"Pokedex"} />
