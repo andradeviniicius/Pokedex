@@ -5,7 +5,7 @@ export default function NotFoundPage() {
   return (
     <>
       <PokedexHeader></PokedexHeader>
-      <MainTitle textContent={"This page doesnt exist"} />
+      <MainTitle textContent={"This page doesn't exist"} />
     </>
   );
 }
