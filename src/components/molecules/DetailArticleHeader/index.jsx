@@ -2,7 +2,7 @@ import { NavArrow} from "@atoms";
 
 import "./detailArticleHeader.scss";
 
-export default function detailArticleHeader() {
+export default function DetailArticleHeader() {
   return (
     <>
       <div className="detailArticle__header">
