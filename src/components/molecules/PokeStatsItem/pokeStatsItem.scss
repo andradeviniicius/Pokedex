@@ -1,0 +1,30 @@
+@use "/public/scss/variables" as *;
+
+.pokeStats {
+  &__item {
+    display: flex;
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    display: flex;
+    line-height: 2.8rem;
+    color: rgba($dark-gray, 0.4);
+    width: 25%;
+  }
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    align-items: center;
+  }
+
+  &__value {
+    font-size: 1.4rem;
+    display: flex;
+    line-height: 2.8rem;
+    color: $dark-gray;
+    width: 20%;
+  }
+}

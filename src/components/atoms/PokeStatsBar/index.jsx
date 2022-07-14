@@ -1,15 +1,14 @@
 import "./pokeStatsBar.scss";
 
-const PokeStatsBar = ({ stats, number }) => {
-  <li className="pokeStats__item">
-    <label className="pokeStats__label">{stats}</label>
-    <div className="pokeStats__control">
-      <p className="pokeStats__value">{number}</p>
-      <div className="pokeStats__bar">
-        <span className="pokeStats__fillBar" />
-      </div>
+const PokeStatsBar = ({ number, color }) => {
+  const classes =
+    "pokeStats__fillBar " + (color ? `pokeStats__fillBar--${color}` : "");
+
+  return (
+    <div className="pokeStats__bar">
+      <div className={classes} style={{ width: `${number}%` }} />
     </div>
-  </li>;
+  );
 };
 
 export default PokeStatsBar;

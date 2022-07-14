@@ -1,0 +1,22 @@
+@use "/public/scss/variables" as *;
+
+.pokeStats {
+  &__bar {
+    width: 100%;
+    background-color: $white-ice;
+    height: 0.3rem;
+  }
+
+  &__fillBar {
+    width: 50%;
+    height: 0.3rem;
+
+    &--red {
+      background-color: $pokedex-red;
+    }
+
+    &--green {
+      background-color: $pokedex-green;
+    }
+  }
+}

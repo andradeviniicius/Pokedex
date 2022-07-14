@@ -11,9 +11,7 @@ import {
   DetailPokemonPage,
 } from "@pages";
 
-import { PokeAbout } from "@organisms";
-
-import { NotFoundPage } from "./components/organisms";
+import { PokeAbout, PokeStats, PokeEvolution, NotFoundPage } from "@organisms";
 
 function App() {
   const dispatch = useDispatch();
@@ -39,11 +37,13 @@ function App() {
       <Route path="/pokedex" element={<PokedexPage />} />
       <Route path="/pokedex/:pokemonId" element={<DetailPokemonPage />}>
         <Route path="/pokedex/:pokemonId/" element={<PokeAbout />} />
-        <Route path="/pokedex/:pokemonId/stats" element={<PokeAbout />} />
-        <Route path="/pokedex/:pokemonId/evolution" element={<PokeAbout />} />
+        <Route path="/pokedex/:pokemonId/stats" element={<PokeStats />} />
+        <Route
+          path="/pokedex/:pokemonId/evolution"
+          element={<PokeEvolution />}
+        />
         <Route path="/pokedex/:pokemonId/moves" element={<PokeAbout />} />
       </Route>
-
       <Route
         path="/detailArticle/:articleIndex"
         element={<DetailArticlePage />}
