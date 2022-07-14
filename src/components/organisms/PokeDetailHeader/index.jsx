@@ -1,10 +1,10 @@
 import { PokeDetailBasicInfo } from "@molecules";
 import "./pokeDetailHeader.scss";
 
-const PokeDetailHeader = () => {
+const PokeDetailHeader = (props) => {
   return (
     <header className="pokemonDetail__header">
-      <PokeDetailBasicInfo />
+      <PokeDetailBasicInfo data={props.data} />
     </header>
   );
 };
