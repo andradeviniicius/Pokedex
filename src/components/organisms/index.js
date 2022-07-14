@@ -5,5 +5,6 @@ export { default as Pokedex } from "./Pokedex";
 export { default as DetailArticle } from "./DetailArticle";
 
 export { default as PokeDetailHeader } from "./PokeDetailHeader";
+export { default as PokeAbout } from "./PokeAbout";
 
 export { default as NotFoundPage } from "./NotFoundPage";
