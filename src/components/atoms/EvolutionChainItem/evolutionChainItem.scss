@@ -3,17 +3,31 @@
 .pokeEvolution {
   &__figure {
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pokeball {
+    width: 100%;
     background-image: url("/public/assets/pokeball-evolution.svg");
     background-repeat: no-repeat;
-    background-size: center;
+    background-position: center;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   &__image {
-    width: 70%;
+    width: 80%;
   }
 
   &__name {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
     color: $dark-gray;
   }
 }
