@@ -6,10 +6,10 @@ const PokeNavigation = () => {
   return (
     <nav className="pokeDetail__nav">
       <ul className="pokeDetail__list">
-        <PokeLink text="About" />
-        <PokeLink text="Base Stats" />
-        <PokeLink text="Evolution" />
-        <PokeLink text="Moves" />
+        <PokeLink path="about" text="About" />
+        <PokeLink path="stats" text="Base Stats" />
+        <PokeLink path="evolution" text="Evolution" />
+        <PokeLink path="moves" text="Moves" />
       </ul>
     </nav>
   );

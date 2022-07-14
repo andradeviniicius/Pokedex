@@ -1,10 +1,10 @@
 import "./pokeLink.scss";
 import { NavLink } from "react-router-dom";
 
-const PokeLink = ({ text }) => {
+const PokeLink = ({ text, path }) => {
   return (
     <NavLink
-      to="/detailPokemon"
+      to={path}
       className={(state) => (state.isActive ? "pokeDetail__link--active" : "")}
     >
       <li className="pokeDetail__link">{text}</li>
