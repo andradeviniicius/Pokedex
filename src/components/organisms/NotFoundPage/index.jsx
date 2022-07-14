@@ -1,7 +1,11 @@
+import { MainTitle } from "@atoms";
+import { PokedexHeader } from "@molecules";
+
 export default function NotFoundPage() {
   return (
     <>
-      <p>This page doesnt exist</p>
+      <PokedexHeader></PokedexHeader>
+      <MainTitle textContent={"This page doesn't exist"} />
     </>
   );
 }

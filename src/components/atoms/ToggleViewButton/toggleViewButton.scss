@@ -1,6 +1,6 @@
 @use "/public/scss/variables" as *;
 
-.pokeBurguer {
+.toggleViewButton {
   background: none;
   border: none;
   padding: 0;
@@ -14,6 +14,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  &__tempLogo {
+    width: 20px;
+    height: 20px;
+  }
 
   &__line1 {
     width: 100%;
@@ -35,7 +40,7 @@
   }
 }
 @media screen and (min-width: $desktop) {
-  .pokeBurguer {
+  .toggleViewButton {
     width: 3rem;
     height: 3rem;
   }

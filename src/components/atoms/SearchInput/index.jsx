@@ -1,6 +1,7 @@
+import React from "react";
 import "./searchInput.scss";
 
-const SearchInput = ({ setRef }) => {
+const SearchInput = React.forwardRef((props, ref) => {
   return (
     <div className="homeHeader__search">
       <button className="homeHeader__button">
@@ -11,12 +12,12 @@ const SearchInput = ({ setRef }) => {
         />
       </button>
       <input
-        ref={setRef}
+        ref={ref}
         className="homeHeader__input"
         placeholder="Search Pokemon, Move, Ability etc"
       ></input>
     </div>
   );
-};
+});
 
 export default SearchInput;

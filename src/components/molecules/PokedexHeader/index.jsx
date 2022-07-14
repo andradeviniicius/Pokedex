@@ -1,4 +1,4 @@
-import { MainTitle, NavArrow, PokeBurguer } from "@atoms";
+import { MainTitle, NavArrow, ToggleViewButton } from "@atoms";
 
 import "./pokedexHeader.scss";
 
@@ -7,8 +7,8 @@ export default function PokedexHeader() {
     <>
       <div className="pokedex__header">
         <div className="pokedex__headerTopWrapper">
-          <NavArrow goingTo={'/'} />
-          <PokeBurguer />
+          <NavArrow />
+          <ToggleViewButton />
         </div>
         <MainTitle textContent={"Pokedex"} />
       </div>

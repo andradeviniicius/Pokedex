@@ -6,8 +6,7 @@ export { default as SearchInput } from "./SearchInput";
 export { default as PokeNewsItem } from "./PokeNewsItem";
 
 export { default as NavArrow } from "./NavArrow";
-export { default as LikeButton } from "./LikeButton";
-export { default as PokeBurguer } from "./PokeBurguer";
+export { default as ToggleViewButton } from "./ToggleViewButton";
 
 export { default as PokeLink } from "./PokeLink";
 export { default as PokeSize } from "./PokeSize";

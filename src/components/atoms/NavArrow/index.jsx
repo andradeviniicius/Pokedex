@@ -4,7 +4,7 @@ import arrowAsset from "@assets/arrow.svg";
 import whiteArrowAsset from "@assets/white-arrow.svg";
 import "./navArrow.scss";
 
-export default function NavArrow({ goingTo, isWhite }) {
+export default function NavArrow({ isWhite }) {
   const navigate = useNavigate();
 
   const goBackHandler = () => {
