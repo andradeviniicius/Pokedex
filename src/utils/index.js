@@ -10,3 +10,11 @@ export function addExtraZero(num, totalLenght) {
 export function capitalFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+export function standardizedDate(receivedDate) {
+  return new Date(receivedDate).toLocaleDateString("en-gb", {
+    year: "numeric",
+    month: "long",
+    day: "2-digit",
+  });
+}

@@ -2,18 +2,18 @@ import "./pokeNewsItem.scss";
 
 import { Link } from "react-router-dom";
 
+import {standardizedDate} from "@utils";
+
 export default function PokeNewsItem({ apiData, dataIndex }) {
-  const javascriptDate = new Date(apiData.publishedAt).toLocaleDateString(
-    "en-gb",
-    { year: "numeric", month: "long", day: "2-digit" }
-  );
+
+  const transformedDate = standardizedDate(apiData.publishedAt);
 
   return (
     <>
       <Link className="pokeNewsItem" to={`/detailArticle/${dataIndex}`}>
         <div className="pokeNewsItem__leftContainer">
           <p className="pokeNewsItem__text">{apiData.title}</p>
-          <p className="pokeNewsItem__date">{javascriptDate}</p>
+          <p className="pokeNewsItem__date">{transformedDate}</p>
         </div>
         <div className="pokeNewsItem__rightContainer">
           <img

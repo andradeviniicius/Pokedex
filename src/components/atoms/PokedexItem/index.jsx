@@ -1,18 +1,17 @@
 import { PokeType } from "@atoms";
-import { flushSync } from "react-dom";
 
 import { useNavigate } from "react-router-dom";
 
-import {addExtraZero, capitalFirstLetter} from "@utils";
+import { addExtraZero, capitalFirstLetter } from "@utils";
 
 import "./pokedexItem.scss";
 import "./pokedexItemModifiers.scss";
 
 export default function PokedexItem({ pokeName, pokeImage, pokeType, pokeId }) {
   const navigate = useNavigate();
-  
+
   function changePages() {
-    navigate(`/pokedex/aboutPokemon/${pokeId}`);
+    navigate(`/pokedex/${pokeId}/`);
   }
 
   return (
@@ -30,11 +29,15 @@ export default function PokedexItem({ pokeName, pokeImage, pokeType, pokeId }) {
             })}
           </div>
 
-          <img className="pokedex__pokeImage" src={pokeImage} alt="" />
+          <img
+            className="pokedex__pokeImage"
+            src={pokeImage}
+            alt={`A image of the pokemon ${pokeName}`}
+          />
           <img
             className="pokedex__background"
-            src={"./../../../../public/assets/pokedex-item-bg.svg"}
-            alt=""
+            src={"public/assets/pokedex-item-bg.svg"}
+            alt="A background image of a transparent pokeball right behing the pokemon"
           />
         </div>
       </li>
