@@ -21,7 +21,7 @@ const HomeSearch = () => {
         textContent="What Pokemon
 are you looking for?"
       />
-      <SearchInput setRef={inputRef} />
+      <SearchInput ref={inputRef} />
     </form>
   );
 };
