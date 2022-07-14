@@ -1,5 +1,7 @@
 import { PokeLink } from "@/components/atoms";
 
+import "./pokeNavigation.scss";
+
 const PokeNavigation = () => {
   return (
     <nav className="pokeDetail__nav">
