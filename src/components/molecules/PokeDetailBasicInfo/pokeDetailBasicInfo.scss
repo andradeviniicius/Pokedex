@@ -35,4 +35,15 @@
     color: $white;
     font-weight: normal;
   }
+  &__pokemon {
+    background-image: url("/public/assets/back-pokeball.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 65%;
+  }
 }

@@ -23,6 +23,13 @@ const PokeDetailBasicInfo = () => {
         </div>
         <p className="pokeDetail__species">Seed Pokemon</p>
       </section>
+      <section className="pokeDetail__pokemon">
+        <img
+          className="pokeDetail__image"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+          alt="Pokemon Image"
+        />
+      </section>
     </>
   );
 };
