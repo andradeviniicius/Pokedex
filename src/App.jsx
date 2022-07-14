@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux/es/exports";
 import { pokedexActions } from "@reduxStore/pokedex.js";
 import { getAllPokemons } from "@allServices/pokedexApi";
@@ -38,7 +38,15 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/pokedex" element={<PokedexPage />} />
       <Route path="/pokedex/:pokemonId" element={<DetailPokemonPage />}>
+        <Route
+          exact
+          path="/pokedex/:pokemonId/"
+          element={<Navigate to="/pokedex/:pokemonId/about" />}
+        />
         <Route path="/pokedex/:pokemonId/about" element={<PokeAbout />} />
+        <Route path="/pokedex/:pokemonId/stats" element={<PokeAbout />} />
+        <Route path="/pokedex/:pokemonId/evolution" element={<PokeAbout />} />
+        <Route path="/pokedex/:pokemonId/moves" element={<PokeAbout />} />
       </Route>
 
       <Route

@@ -12,7 +12,7 @@ export default function PokedexItem({ pokeName, pokeImage, pokeType, pokeId }) {
   const navigate = useNavigate();
   
   function changePages() {
-    navigate(`/pokedex/aboutPokemon/${pokeId}`);
+    navigate(`/pokedex/${pokeId}/`);
   }
 
   return (
