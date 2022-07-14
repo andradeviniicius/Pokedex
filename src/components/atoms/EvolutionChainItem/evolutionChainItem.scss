@@ -1,0 +1,19 @@
+@use "/public/scss/variables" as *;
+
+.pokeEvolution {
+  &__figure {
+    width: 30%;
+    background-image: url("/public/assets/pokeball-evolution.svg");
+    background-repeat: no-repeat;
+    background-size: center;
+    display: flex;
+  }
+
+  &__image {
+    width: 70%;
+  }
+
+  &__name {
+    color: $dark-gray;
+  }
+}

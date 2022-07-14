@@ -12,7 +12,7 @@ export { default as PokeNavigation } from "./PokeNavigation";
 export { default as PokeAboutResume } from "./PokeAboutResume";
 export { default as PokeAboutInfo } from "./PokeAboutInfo";
 export { default as PokeStatsItem } from "./PokeStatsItem";
-export { default as EvolutionChain } from "./PokeStatsItem";
+export { default as EvolutionChain } from "./EvolutionChain";
 
 export { default as DetailArticleHeader } from "./DetailArticleHeader";
 export { default as DetailArticleContent } from "./DetailArticleContent";
