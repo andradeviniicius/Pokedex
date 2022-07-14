@@ -11,7 +11,7 @@ import {
   DetailPokemonPage,
 } from "@pages";
 
-import { PokeAbout } from "@organisms";
+import { PokeAbout, PokeStats } from "@organisms";
 
 import { NotFoundPage } from "./components/organisms";
 
@@ -39,8 +39,8 @@ function App() {
       <Route path="/pokedex" element={<PokedexPage />} />
       <Route path="/pokedex/:pokemonId" element={<DetailPokemonPage />}>
         <Route path="/pokedex/:pokemonId/about" element={<PokeAbout />} />
+        <Route path="/pokedex/:pokemonId/stats" element={<PokeStats />} />
       </Route>
-
       <Route
         path="/detailArticle/:articleIndex"
         element={<DetailArticlePage />}
