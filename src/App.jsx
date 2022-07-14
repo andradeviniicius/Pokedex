@@ -11,7 +11,13 @@ import {
   DetailPokemonPage,
 } from "@pages";
 
-import { PokeAbout, PokeStats, PokeEvolution, NotFoundPage } from "@organisms";
+import {
+  PokeAbout,
+  PokeStats,
+  PokeEvolution,
+  PokeMoves,
+  NotFoundPage,
+} from "@organisms";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,7 +48,7 @@ function App() {
           path="/pokedex/:pokemonId/evolution"
           element={<PokeEvolution />}
         />
-        <Route path="/pokedex/:pokemonId/moves" element={<PokeAbout />} />
+        <Route path="/pokedex/:pokemonId/moves" element={<PokeMoves />} />
       </Route>
       <Route
         path="/detailArticle/:articleIndex"
