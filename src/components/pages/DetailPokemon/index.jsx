@@ -58,7 +58,17 @@ const DetailPokemonPage = () => {
               }
             />
             <Route path="/about" element={<PokeAbout />} />
-            <Route path="/stats" element={<PokeStats />} />
+            <Route
+              path="/stats"
+              element={
+                <PokeStats
+                  data={{
+                    name: singlePokemon.name || "charmander",
+                    stats: singlePokemon.stats || [],
+                  }}
+                />
+              }
+            />
             <Route path="/evolution" element={<PokeEvolution />} />
             <Route path="/moves" element={<PokeMoves />} />
           </Routes>
