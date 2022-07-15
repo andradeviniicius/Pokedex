@@ -32,7 +32,7 @@ const DetailPokemonPage = () => {
   }, [params]);
 
   return (
-    <main className="pokeDetail">
+    <div className="pokeDetail">
       <PokeDetailHeader
         data={{
           single: singlePokemon,
@@ -44,7 +44,7 @@ const DetailPokemonPage = () => {
             "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
         }}
       />
-      <section className="pokeDetail__content">
+      <main className="pokeDetail__content">
         <PokeNavigation />
         <div className="pokeDetail__data">
           <Routes>
@@ -73,8 +73,8 @@ const DetailPokemonPage = () => {
             <Route path="/moves" element={<PokeMoves />} />
           </Routes>
         </div>
-      </section>
-    </main>
+      </main>
+    </div>
   );
 };
 
