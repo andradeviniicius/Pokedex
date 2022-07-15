@@ -45,3 +45,14 @@ export async function getSinglePokemon(pokemonUrl) {
   const data = await response.json();
   return data;
 }
+
+export async function getPokemonSpecies(pokemonUrl) {
+  const response = await fetch(pokemonUrl);
+
+  if (!response.ok) {
+    throw new Error("Error!");
+  }
+
+  const data = await response.json();
+  return data;
+}

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getSinglePokemon } from "@/services/pokedexApi";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-
+import { LoadingSpinner } from "@atoms";
 import { PokeDetailHeader } from "@organisms";
 import { PokeNavigation } from "@molecules";
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -29,6 +29,7 @@ const DetailPokemonPage = () => {
     fetch();
   }, [params]);
 
+  // console.log(singlePokemon || '');
   return (
     <div className="pokeDetail">
       <PokeDetailHeader
@@ -55,7 +56,25 @@ const DetailPokemonPage = () => {
                 />
               }
             />
-            <Route path="/about" element={<PokeAbout />} />
+            <Route
+              path="/about"
+              element={
+                singlePokemon.length === 0 ? (
+                  <LoadingSpinner />
+                ) : (
+                  <PokeAbout
+                    data={{
+                      description: singlePokemon?.id,
+                      height: singlePokemon?.height,
+                      weight: singlePokemon?.weight,
+                      gender: Math.floor(Math.random() * (100 - 0 + 1) + 0),
+                      eggGroups: "Invalid Data.",
+                      eggCycle: "Invalid Data.",
+                    }}
+                  />
+                )
+              }
+            />
             <Route
               path="/stats"
               element={
