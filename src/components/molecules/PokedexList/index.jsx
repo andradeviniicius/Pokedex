@@ -4,10 +4,15 @@ import { PokedexItem, LoadingSpinner } from "@atoms";
 import { useSelector } from "react-redux";
 import useLazy from "@/hooks/useLazy";
 
+import { filterPokemon } from "@utils";
+
+import { useLocation } from "react-router-dom";
+
 import "./pokedexList.scss";
 
 export default function PokedexList() {
-  const allPokemons = useSelector((state) => state.pokedex.allPokemons);
+  const loc = useLocation();
+
   const [pokemonData, setPokemonData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [dataHasEnd, setDataHasEnd] = useState(false);
@@ -16,7 +21,16 @@ export default function PokedexList() {
 
   const spinnerRef = useRef();
 
+  let allPokemons = useSelector((state) => state.pokedex.allPokemons);
+
   useEffect(() => {
+    if (loc.search.includes("?q=")) {
+      allPokemons = allPokemons.filter((item) => {
+        return filterPokemon(item, loc.search.slice(3));
+      });
+    } else {
+      loc.search = "";
+    }
     const fetch = async () => {
       let slicedPokemons;
       if (end >= allPokemons.length) {
@@ -47,7 +61,7 @@ export default function PokedexList() {
   return (
     <>
       <ul className="pokedex__list">
-        {pokemonData.map((item,index) => {
+        {pokemonData.map((item, index) => {
           return (
             <PokedexItem
               key={index}

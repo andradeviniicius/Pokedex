@@ -8,18 +8,16 @@ export default function MainTitle({
   customStyle,
 }) {
   return (
-    <>
-      <h1
-        className={`
+    <h1
+      className={`
         mainTitle
         ${blockModifier ? `mainTitle--${blockModifier}` : ""}
         ${elem ? `mainTitle__${elem}` : ""}
         ${elemModifier ? `mainTitle__${elem}--${elemModifier}` : ""}
         ${customStyle ? `${customStyle}` : ""}
         `}
-      >
-        {textContent}
-      </h1>
-    </>
+    >
+      {textContent}
+    </h1>
   );
 }

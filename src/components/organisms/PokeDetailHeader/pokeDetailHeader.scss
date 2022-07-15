@@ -1,0 +1,64 @@
+@use "/public/scss/variables" as *;
+
+.pokemonDetail {
+  &__header {
+    width: 100%;
+    padding: 6rem 2rem 0 2rem;
+    background-color: $grass-type3;
+
+    &--bug {
+      background: $bug-type2;
+    }
+    &--dragon {
+      background: $dragon-type1;
+    }
+    &--fairy {
+      background: $fairy-type2;
+    }
+    &--fighting {
+      background: $fighting-type2;
+    }
+    &--flying {
+      background: $flying-type2;
+    }
+    &--ghost {
+      background: $ghost-type2;
+    }
+    &--ground {
+      background: $ground-type2;
+    }
+    &--ice {
+      background: $ice-type3;
+    }
+    &--normal {
+      background: $normal-type2;
+    }
+    &--poison {
+      background: $poison-type3;
+    }
+    &--rock {
+      background: $rock-type2;
+    }
+    &--steel {
+      background: $steel-type2;
+    }
+    &--grass {
+      background: $grass-type3;
+    }
+    &--water {
+      background: $water-type3;
+    }
+    &--fire {
+      background: $fire-type3;
+    }
+    &--electric {
+      background: $electric-type1;
+    }
+    &--psychic {
+      background: $psychic-type2;
+    }
+    &--dark {
+      background: $dark-type2;
+    }
+  }
+}

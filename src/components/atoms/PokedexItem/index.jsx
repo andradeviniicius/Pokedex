@@ -1,18 +1,17 @@
 import { PokeType } from "@atoms";
-import { flushSync } from "react-dom";
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import { addExtraZero, capitalFirstLetter } from "@utils";
 
 import "./pokedexItem.scss";
 import "./pokedexItemModifiers.scss";
 
 export default function PokedexItem({ pokeName, pokeImage, pokeType, pokeId }) {
-  function addExtraZero(num, totalLenght) {
-    return String(num).padStart(totalLenght, "0");
-  }
+  const navigate = useNavigate();
 
-  function capitalFirstLetter(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+  function changePages() {
+    navigate(`/pokedex/${pokeId}/`);
   }
 
   return (
@@ -20,7 +19,7 @@ export default function PokedexItem({ pokeName, pokeImage, pokeType, pokeId }) {
       <li
         className={`pokedex__item ${`pokedex__item--${pokeType[0].type.name.toLowerCase()}`}`}
       >
-        <Link to={"/pokedex"}>
+        <div onClick={changePages}>
           <p className="pokedex__pokeId">#{addExtraZero(pokeId, 3)}</p>
 
           <p className="pokedex__pokeName">{capitalFirstLetter(pokeName)}</p>
@@ -30,13 +29,17 @@ export default function PokedexItem({ pokeName, pokeImage, pokeType, pokeId }) {
             })}
           </div>
 
-          <img className="pokedex__pokeImage" src={pokeImage} alt="" />
+          <img
+            className="pokedex__pokeImage"
+            src={pokeImage}
+            alt={`A image of the pokemon ${pokeName}`}
+          />
           <img
             className="pokedex__background"
-            src={"./../../../../public/assets/pokedex-item-bg.svg"}
-            alt=""
+            src={"public/assets/pokedex-item-bg.svg"}
+            alt="A background image of a transparent pokeball right behing the pokemon"
           />
-        </Link>
+        </div>
       </li>
     </>
   );

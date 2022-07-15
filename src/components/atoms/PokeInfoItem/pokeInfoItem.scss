@@ -1,0 +1,14 @@
+@use "/public/scss/variables" as *;
+
+.pokeAbout {
+  &__item {
+    color: $dark-gray;
+    font-size: 1.4rem;
+    display: flex;
+    line-height: 2.8rem;
+
+    &:not(:first-child) {
+      margin-top: 0.5rem;
+    }
+  }
+}

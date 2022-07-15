@@ -10,14 +10,7 @@ export default function PokeNewsList() {
   return (
     <div className="pokeNews__list">
       {pokeNews.map((data, index) => {
-        return (
-          <PokeNewsItem
-          key={index}
-            apiData={data}
-            dataIndex={index}
-
-          />
-        );
+        return <PokeNewsItem key={index} apiData={data} dataIndex={index} />;
       })}
     </div>
   );

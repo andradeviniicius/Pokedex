@@ -1,0 +1,9 @@
+@use "/public/scss/variables" as *;
+
+.pokeAbout {
+  &__description {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: $dark-gray;
+  }
+}

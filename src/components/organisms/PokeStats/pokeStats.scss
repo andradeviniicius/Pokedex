@@ -1,0 +1,13 @@
+@use "/public/scss/variables" as *;
+
+.pokeStats {
+  &__list {
+    margin-bottom: 4rem;
+  }
+
+  &__text {
+    color: rgba($dark-gray, 0.6);
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+  }
+}
