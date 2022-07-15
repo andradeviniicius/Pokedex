@@ -2,7 +2,9 @@ import { useEffect } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux/es/exports";
 import { pokedexActions } from "@reduxStore/pokedex.js";
+import { pokeNewsActions } from "@reduxStore/pokeNews";
 import { getAllPokemons } from "@allServices/pokedexApi";
+import { fetchPokeNews } from "@allServices/newsApi";
 
 import {
   HomePage,
@@ -21,7 +23,7 @@ import {
 
 function App() {
   const dispatch = useDispatch();
-
+  
   useEffect(() => {
     const fetch = async () => {
       const pokemons = await getAllPokemons();
@@ -29,23 +31,39 @@ function App() {
         dispatchHandler(pokemons);
       }
     };
-
+    
     fetch();
   }, []);
-
+  
   const dispatchHandler = (pokemons) => {
     dispatch(pokedexActions.fillPokemons({ pokemons: pokemons }));
   };
-
+  
+  useEffect(() => {
+    console.log('useEffect');
+    const getPokeNews = async () => {
+      const data = await fetchPokeNews();
+      dispatch(pokeNewsActions.fillNews({ news: data.articles }));
+    };
+    getPokeNews();
+  }, []);
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/pokedex" element={<PokedexPage />} />
-      <Route path="/pokedex/:pokemonId/*" element={<DetailPokemonPage />} />
+      <Route path="/pokedex/:pokemonId" element={<DetailPokemonPage />}>
+        <Route path="/pokedex/:pokemonId/" element={<PokeAbout />} />
+        <Route path="/pokedex/:pokemonId/stats" element={<PokeStats />} />
+        <Route
+          path="/pokedex/:pokemonId/evolution"
+          element={<PokeEvolution />}
+          />
+        <Route path="/pokedex/:pokemonId/moves" element={<PokeMoves />} />
+      </Route>
       <Route
         path="/detailArticle/:articleIndex"
         element={<DetailArticlePage />}
-      />
+        />
       <Route path="*" element={<NotFoundPage />}></Route>
     </Routes>
   );

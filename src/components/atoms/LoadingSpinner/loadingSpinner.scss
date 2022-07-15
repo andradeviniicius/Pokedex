@@ -30,3 +30,9 @@
     transform: rotate(360deg);
   }
 }
+
+.normalSpinner {
+  position: static;
+  margin-bottom: 10px;
+  transform: translateX(0);
+}
