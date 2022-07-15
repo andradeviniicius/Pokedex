@@ -57,7 +57,7 @@
   &__pokemon {
     background-image: url("/public/assets/back-pokeball.svg");
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: bottom center;
     display: flex;
     justify-content: center;
     @media screen and (min-width: $desktop) {
@@ -65,6 +65,7 @@
       width: 40%;
       display: flex;
       justify-content: flex-start;
+      background-position: left center;
     }
   }
 
