@@ -3,7 +3,7 @@ import { addExtraZero } from "@utils";
 import "./pokeDetailBasicInfo.scss";
 
 const PokeDetailBasicInfo = (props) => {
-  const { name, id, types } = props.data;
+  const { name, id, types, image } = props.data;
   console.log(props.data);
 
   return (
@@ -29,11 +29,7 @@ const PokeDetailBasicInfo = (props) => {
         <p className="pokeDetail__species">Seed Pokemon</p>
       </section>
       <section className="pokeDetail__pokemon">
-        <img
-          className="pokeDetail__image"
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-          alt="Pokemon Image"
-        />
+        <img className="pokeDetail__image" src={image} alt="Pokemon Image" />
       </section>
     </>
   );

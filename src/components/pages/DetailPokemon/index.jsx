@@ -5,7 +5,9 @@ import { useParams } from "react-router-dom";
 
 import { PokeDetailHeader } from "@organisms";
 import { PokeNavigation } from "@molecules";
-import { Outlet } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import { PokeAbout, PokeStats, PokeEvolution, PokeMoves } from "@organisms";
 
 import "./detailPokemonPage.scss";
 
@@ -17,7 +19,7 @@ const DetailPokemonPage = () => {
   useEffect(() => {
     const fetch = async () => {
       const id = params.pokemonId - 1;
-      console.log(id);
+      console.log("id " + id);
       const pokemonFilter = allPokemons.filter(
         (pokemon) => pokemon.id === id.toString()
       );
@@ -27,21 +29,39 @@ const DetailPokemonPage = () => {
     };
 
     fetch();
-  }, []);
+  }, [params]);
 
   return (
     <main className="pokeDetail">
       <PokeDetailHeader
         data={{
-          name: singlePokemon.name,
-          id: singlePokemon.id,
-          types: singlePokemon.types,
+          single: singlePokemon,
+          name: singlePokemon.name || "loading",
+          id: singlePokemon.id || "loading",
+          types: singlePokemon.types || [],
+          image:
+            singlePokemon.sprites?.other["official-artwork"]["front_default"] ||
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
         }}
       />
       <section className="pokeDetail__content">
         <PokeNavigation />
         <div className="pokeDetail__data">
-          <Outlet />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Navigate
+                  to={`/pokedex/${params.pokemonId}/about`}
+                  replace={true}
+                />
+              }
+            />
+            <Route path="/about" element={<PokeAbout />} />
+            <Route path="/stats" element={<PokeStats />} />
+            <Route path="/evolution" element={<PokeEvolution />} />
+            <Route path="/moves" element={<PokeMoves />} />
+          </Routes>
         </div>
       </section>
     </main>

@@ -41,15 +41,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/pokedex" element={<PokedexPage />} />
-      <Route path="/pokedex/:pokemonId" element={<DetailPokemonPage />}>
-        <Route path="/pokedex/:pokemonId/" element={<PokeAbout />} />
-        <Route path="/pokedex/:pokemonId/stats" element={<PokeStats />} />
-        <Route
-          path="/pokedex/:pokemonId/evolution"
-          element={<PokeEvolution />}
-        />
-        <Route path="/pokedex/:pokemonId/moves" element={<PokeMoves />} />
-      </Route>
+      <Route path="/pokedex/:pokemonId/*" element={<DetailPokemonPage />} />
       <Route
         path="/detailArticle/:articleIndex"
         element={<DetailArticlePage />}
