@@ -13,7 +13,7 @@ const PokeDetailBasicInfo = (props) => {
           <LikeButton />
         </section>
         <section className="pokeDetail__title">
-          <MainTitle elem={"about"} elemModifier={"left"} textContent={name} />
+          <MainTitle elem={"about"} elemModifier={"left"} textContent={capitalFirstLetter(name)} />
           <p className="pokeDetail__number">{"#" + addExtraZero(id, 3)}</p>
         </section>
         <section className="pokeDetail__type">
