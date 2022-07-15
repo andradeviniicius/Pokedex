@@ -6,7 +6,7 @@ const useLazy = (quantity, isLoading, setIsLoading) => {
 
   const addObserver = (element) => {
     const options = {
-      threshold: 0.5,
+      threshold: 0.2,
     };
 
     const observer = new IntersectionObserver((elements) => {
