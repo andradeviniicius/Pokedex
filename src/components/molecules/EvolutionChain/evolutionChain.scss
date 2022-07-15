@@ -1,0 +1,33 @@
+@use "/public/scss/variables" as *;
+
+.pokeEvolution {
+  &__chain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $white-ice;
+    }
+  }
+
+  &__level {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__arrow {
+    width: 35%;
+  }
+
+  &__levelNumber {
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+}

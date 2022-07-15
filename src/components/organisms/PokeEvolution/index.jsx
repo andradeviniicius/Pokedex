@@ -10,6 +10,7 @@ const PokeEvolution = () => {
         textContent={"Evolution Chain"}
       />
       <EvolutionChain />
+      <EvolutionChain />
     </section>
   );
 };
