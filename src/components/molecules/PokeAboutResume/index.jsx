@@ -6,8 +6,8 @@ const PokeAboutResume = () => {
   return (
     <>
       <p className="pokeAbout__description">
-        Bulbasaur can be seen napping in bright sunlight. There is a seed on its
-        back. By soaking up the sun's rays, the seed grows progressively larger.{" "}
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been a type specimen book.{" "}
       </p>
       <PokeSize />
     </>
