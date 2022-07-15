@@ -33,7 +33,6 @@
 
 .normalSpinner {
   position: static;
-  left: 0;
-  bottom: 0;
-
+  margin-bottom: 10px;
+  transform: translateX(0);
 }
