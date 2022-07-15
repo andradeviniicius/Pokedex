@@ -1,5 +1,5 @@
 import { NavArrow, LikeButton, MainTitle, PokeType } from "@atoms";
-import { addExtraZero } from "@utils";
+import { addExtraZero, capitalFirstLetter } from "@utils";
 import "./pokeDetailBasicInfo.scss";
 
 const PokeDetailBasicInfo = (props) => {
@@ -13,7 +13,7 @@ const PokeDetailBasicInfo = (props) => {
         <LikeButton />
       </section>
       <section className="pokeDetail__title">
-        <MainTitle elem={"about"} textContent={name} />
+        <MainTitle elem={"about"} textContent={capitalFirstLetter(name)} />
         <p className="pokeDetail__number">{"#" + addExtraZero(id, 3)}</p>
       </section>
       <section className="pokeDetail__type">
