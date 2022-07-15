@@ -1,15 +1,15 @@
 import "./pokeSize.scss";
 
-const PokeSize = (props) => {
+const PokeSize = ({weightSize, heightSize}) => {
   return (
     <div className="pokeAbout__box">
       <div className="pokeAbout__control">
         <label className="pokeAbout__label">Height</label>
-        <p className="pokeAbout__size">1' 04" (0.70 cm)</p>
+        <p className="pokeAbout__size">{heightSize}0cm</p>
       </div>
       <div className="pokeAbout__control">
         <label className="pokeAbout__label">Weight</label>
-        <p className="pokeAbout__size">13.2 lbs (6.9 kg)</p>
+        <p className="pokeAbout__size">{weightSize}kg</p>
       </div>
     </div>
   );

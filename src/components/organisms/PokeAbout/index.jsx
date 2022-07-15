@@ -16,11 +16,18 @@ const PokeAbout = ({ data }) => {
 
     fetch();
   }, [data]);
-  console.log(description.length===0);
 
   return (
     <section className="pokeAbout">
-      {description.length===0 ? <p>Loading</p> : <PokeAboutResume description={description.flavor_text_entries[20].flavor_text} />}
+      {description.length === 0 ? (
+        <p>Loading</p>
+      ) : (
+        <PokeAboutResume
+          description={description.flavor_text_entries[20].flavor_text}
+          weight={data.weight}
+          height={data.height}
+        />
+      )}
       <PokeAboutInfo />
     </section>
   );

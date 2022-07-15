@@ -3,13 +3,13 @@ import { PokeSize } from "@atoms";
 import "./pokeAboutResume.scss";
 
 
-const PokeAboutResume = ({description}) => {
+const PokeAboutResume = ({description, height, weight}) => {
   return (
     <>
       <p className="pokeAbout__description">
         {description}
       </p>
-      <PokeSize />
+      <PokeSize weightSize={weight} heightSize={height} />
     </>
   );
 };
