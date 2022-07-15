@@ -60,5 +60,12 @@
     &--dark {
       background: $dark-type2;
     }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 144rem;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
   }
 }

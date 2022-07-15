@@ -13,7 +13,6 @@ const PokeStats = (props) => {
   ];
 
   const data = props.data;
-  console.log(data);
   return (
     <section className="pokeStats">
       <ul className="pokeStats__list">

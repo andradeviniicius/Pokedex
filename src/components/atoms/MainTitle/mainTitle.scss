@@ -6,7 +6,7 @@
   font-size: 3rem;
   line-height: 3.8rem;
   color: #303943;
-  
+
   &__about {
     font-size: 3.6rem;
     line-height: 4.6rem;
@@ -16,15 +16,21 @@
       font-size: 2.2rem;
       line-height: 2.8rem;
     }
+
+    &--left {
+      @media screen and (min-width: $desktop) {
+        text-align: left;
+      }
+    }
   }
 
   @media screen and (min-width: $tablet) {
-    text-align: center;
+    //text-align: center;
     font-size: 4rem;
   }
-  
+
   @media screen and (min-width: $desktop) {
-    text-align: center;
+    //text-align: center;
     line-height: 7rem;
     font-size: 6rem;
   }

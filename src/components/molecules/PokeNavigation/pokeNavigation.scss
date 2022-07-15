@@ -4,6 +4,11 @@
   &__nav {
     width: 100%;
     margin-bottom: 1.9rem;
+
+    @media screen and (min-width: $desktop) {
+      max-width: 75rem;
+      margin: 0 auto 4rem;
+    }
   }
 
   &__list {

@@ -1,6 +1,6 @@
 import { PokedexHeader, PokedexList } from "@molecules";
 
-import './pokedex.scss'
+import "./pokedex.scss";
 
 export default function Pokedex() {
   return (
