@@ -4,7 +4,6 @@ import "./pokeDetailBasicInfo.scss";
 
 const PokeDetailBasicInfo = (props) => {
   const { name, id, types, image } = props.data;
-  console.log(props.data);
 
   return (
     <>

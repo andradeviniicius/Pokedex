@@ -19,11 +19,9 @@ const DetailPokemonPage = () => {
   useEffect(() => {
     const fetch = async () => {
       const id = params.pokemonId - 1;
-      console.log("id " + id);
       const pokemonFilter = allPokemons.filter(
         (pokemon) => pokemon.id === id.toString()
       );
-      console.log(pokemonFilter);
       const pokeSingle = await getSinglePokemon(pokemonFilter[0].url);
       setSinglePokemon(pokeSingle);
     };
