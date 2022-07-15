@@ -17,9 +17,10 @@ export default function PokedexItem({ pokeName, pokeImage, pokeType, pokeId }) {
   return (
     <>
       <li
+        onClick={changePages}
         className={`pokedex__item ${`pokedex__item--${pokeType[0].type.name.toLowerCase()}`}`}
       >
-        <div onClick={changePages}>
+        <div>
           <p className="pokedex__pokeId">#{addExtraZero(pokeId, 3)}</p>
 
           <p className="pokedex__pokeName">{capitalFirstLetter(pokeName)}</p>
