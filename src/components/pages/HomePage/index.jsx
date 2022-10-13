@@ -6,7 +6,8 @@ const HomePage = () => {
     <>
       <HomeHeader />
       <main>
-        <PokeNews />
+        {/* NewsAPI doesnt allow requests on production */}
+        {/* <PokeNews /> */}
       </main>
     </>
   );

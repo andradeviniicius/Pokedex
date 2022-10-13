@@ -1,7 +1,7 @@
 const url =
   "https://newsapi.org/v2/everything?" +
   "q=Pokemon&" +
-  "searchIn=title&"+
+  "searchIn=title&" +
   "language=en&" +
   "from=2022-07-08&" +
   "sortBy=popularity&" +
