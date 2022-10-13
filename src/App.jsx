@@ -23,7 +23,6 @@ import {
 
 function App() {
   const dispatch = useDispatch();
-  
   useEffect(() => {
     const fetch = async () => {
       const pokemons = await getAllPokemons();

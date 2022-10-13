@@ -5,7 +5,7 @@ const url =
   "language=en&" +
   "from=2022-07-08&" +
   "sortBy=popularity&" +
-  "apiKey=a859eb66cf3541afa25cf257483c9300";
+  import.meta.env.VITE_NEWS_KEY;
 
 export async function fetchPokeNews() {
   const res = await fetch(url);
